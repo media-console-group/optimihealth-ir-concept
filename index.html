@@ -1,0 +1,1678 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js')</script>
+<title>Optimi Health Corp. (Nasdaq: OPTH) | Investor Relations Concept</title>
+<meta name="description" content="An independent design concept for the Optimi Health (Nasdaq: OPTH) investor relations page. Not affiliated with Optimi Health Corp.; the official IR site is https://ir.optimi.net.">
+<link rel="icon" href="img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&amp;family=Chivo+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+/* mc:tokens */
+:root{
+  /* palette.mjs --brand "accent=#8a5215,paper=#f2ecd8,deep=#1a1612" --strategy restrained  (restrained)
+     accent   #8a5215 oklch(0.493 0.103 62.3)
+     deep     #1a1612 oklch(0.203 0.010 67.2)
+     paper    #f2ecd8 oklch(0.942 0.027 93.1)
+     measured: white on --accent-ink 7.34:1, --accent-ink on --paper 6.21:1, --text-mid on --tint 5.65:1 */
+  --H: 62.3; --Hn: 67.2;
+  --accent:        oklch(0.73 0.118 62.3); /* bright: fills on light stock; text only on dark where --check proves >= 4.5; derived L0.78 */
+  --accent-lo:     oklch(0.73 0.118 62.3 / 0.14);
+  --accent-lt:     oklch(0.85 0.082 62.3); /* bright accent ON dark surfaces */
+  --accent-ink:    oklch(0.46 0.103 62.3); /* TEXT, links, primary-button background */
+  --accent-ink-d:  oklch(0.40 0.091 62.3); /* hover */
+  --ink:           oklch(0.26 0.004 67.2); /* headings */
+  --deep:          oklch(0.215 0.007 67.2); /* permanently dark band */
+  --paper:         oklch(0.942 0.027 93.1); /* real paper */
+  --card:          oklch(0.955 0.027 93.1);
+  --tint:          oklch(0.965 0.010 62.3); /* .sec-tint band, concept note, card interiors */
+  --tint-2:        oklch(0.91 0.018 62.3); /* borders, ghost outlines, the darker of two light bands */
+  --text:          oklch(0.31 0.004 67.2);
+  --text-mid:      oklch(0.49 0.004 67.2);
+  --line:          oklch(0.30 0.010 67.2 / 0.13);
+  --line-d:        oklch(0.98 0.012 62.3 / 0.14);
+  /* surface-slot defaults (foundation surface block); retune in surface.css */
+  --sheet-edge:    oklch(0.40 0.091 62.3 / 0.26);
+  --blind:         oklch(1.00 0.000 0 / 0.5);
+  --blind-k:       oklch(1.00 0.000 0 / 0.85);
+  --sheet-neg:     oklch(0.98 0.012 62.3 / 0.05);
+  --serif:         'Archivo', system-ui, sans-serif;
+  --sans:          'Source Serif 4', system-ui, sans-serif;
+  --mono:          'Chivo Mono', ui-monospace, monospace;
+  --wrap: 1140px; --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+/* mc:substrate 9576b9be1505 */
+/* mediaconsole substrate: inlined by scripts/scaffold.mjs, identical on every page. Never edit or retype it;
+   override in page/layer.css or page/surface.css (both load after it). Band: all. Hue-parametric: colours are
+   tokens or oklch(... var(--Hn)). Integrity: opaque nav, content visible without JS, print and forced-colors safe. */
+:where(:root){--wrap:1140px;--ease:cubic-bezier(0.22, 1, 0.36, 1)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;scroll-padding-top:88px}
+body{font-family:var(--sans);color:var(--text);background:var(--paper);font-size:16px;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none} img,svg{display:block;max-width:100%} button{font:inherit;cursor:pointer}
+::selection{background:var(--accent-lt);color:var(--deep)}
+:focus-visible{outline:2px solid var(--accent-ink);outline-offset:3px;border-radius:2px}
+.sec-dark :focus-visible,.snapshot :focus-visible,footer :focus-visible{outline-color:var(--accent-lt)}
+.wrap{width:min(var(--wrap),100% - 44px);margin-inline:auto}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip-link{position:absolute;left:12px;top:-60px;z-index:200;background:var(--deep);color:#fff;padding:10px 16px;border-radius:6px;font-size:.85rem;transition:top .2s var(--ease)}
+.skip-link:focus{top:12px}
+.concept-note{background:var(--tint);color:var(--accent-ink-d);font-size:.78rem;text-align:center;padding:8px 16px;position:relative;z-index:101}
+.concept-note a{color:inherit;font-weight:600;text-decoration:underline}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;letter-spacing:-.01em;color:var(--ink)}
+h1{font-size:clamp(2.35rem,5.3vw,4rem)} h2{font-size:clamp(1.7rem,3.4vw,2.5rem)} h3{font-size:clamp(1.15rem,2vw,1.4rem)}
+p{max-width:68ch}
+.eyebrow{font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-ink);display:inline-flex;align-items:center;gap:9px;margin-bottom:16px}
+.eyebrow::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none}
+.lead{font-size:clamp(1.08rem,1.7vw,1.3rem);line-height:1.55;color:var(--text-mid)}
+/* four house buttons: primary + ghost on light stock, primary-light + ghost-light on dark stock.
+   Text on dark uses --accent-lt, never --accent (D16: --accent may be a mid-L real brand colour; it is a fill). */
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:11px 22px;border-radius:8px;font-family:var(--sans);font-size:.82rem;font-weight:600;letter-spacing:.02em;border:1.5px solid transparent;background:transparent;transition:background .2s var(--ease),border-color .2s var(--ease),color .2s var(--ease),transform .2s var(--ease)}
+.btn:hover{transform:translateY(-1px)} .btn .arw{font-family:var(--mono);transition:transform .2s var(--ease)} .btn:hover .arw{transform:translateX(3px)}
+.btn-primary{background:var(--accent-ink);color:#fff} .btn-primary:hover{background:var(--accent-ink-d)}
+.btn-ghost{border-color:var(--tint-2);color:var(--accent-ink)} .btn-ghost:hover{background:var(--tint);border-color:var(--accent-ink)}
+.btn-primary-light{background:var(--accent-lt);color:var(--deep)} .btn-primary-light:hover{background:var(--tint)}
+.btn-ghost-light{border-color:oklch(0.98 0.01 var(--Hn)/.4);color:#fff} .btn-ghost-light:hover{background:oklch(0.98 0.01 var(--Hn)/.1)}
+/* nav: opaque by rule (no translucency, no blur); markup is emitted by scaffold.mjs from page.json */
+.site-nav{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--line);transition:box-shadow .3s var(--ease)}
+.site-nav.scrolled{box-shadow:0 6px 24px oklch(0.3 0.02 var(--Hn)/.07)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+.nav-brand{display:flex;align-items:center;gap:12px;min-height:44px;min-width:0}
+.nav-logo{display:flex;align-items:center;flex:none}
+.nav-logo img{height:26px;width:auto}
+.nav-name{font-family:var(--serif);font-size:1.2rem;line-height:1.1;color:var(--ink)}
+.nav-tick{font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;color:var(--text-mid);border:1px solid var(--line);border-radius:5px;padding:4px 8px}
+.nav-links{display:flex;align-items:center;gap:24px;list-style:none}
+.nav-links a:not(.btn){font-size:.86rem;font-weight:500;color:var(--text-mid);transition:color .2s var(--ease)}
+.nav-links a:not(.btn):hover{color:var(--accent-ink)}
+.nav-links a.active{color:var(--ink);text-decoration:underline;text-underline-offset:7px;text-decoration-color:var(--accent);text-decoration-thickness:2px}
+.nav-burger{display:none;flex-direction:column;gap:5px;width:44px;height:44px;align-items:center;justify-content:center;background:none;border:none}
+.nav-burger span{width:22px;height:2px;background:var(--ink);border-radius:2px;transition:transform .25s var(--ease),opacity .2s}
+.nav-burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+/* bands: FLAT FILLS, the floor only; page/surface.css must override them (verify FAILs flat pages) */
+main{display:block;overflow-x:clip}   /* a translated reveal or wide motif can never widen the page */
+main>section{padding:clamp(56px,8vw,104px) 0}
+.sec-white{background:var(--paper)} .sec-tint{background:var(--tint)}
+.sec-dark{background:var(--deep);color:oklch(0.9 0.008 var(--Hn))}
+.sec-dark h1,.sec-dark h2,.sec-dark h3{color:#fff} .sec-dark .eyebrow{color:var(--accent-lt)} .sec-dark .eyebrow::before{background:var(--accent)}
+.sec-dark .lead{color:oklch(0.86 0.01 var(--Hn))}
+.sec-head{max-width:660px;margin-bottom:clamp(36px,5vw,56px)} .sec-head p{margin-top:14px}
+/* data sits on its own plate: table.fin cells are transparent, never paint a band behind figures */
+.table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+table.fin{width:100%;border-collapse:collapse;min-width:540px;font-size:.92rem}
+table.fin caption{text-align:left;font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--text-mid);padding:14px 20px;border-bottom:1px solid var(--line);background:var(--card)}
+table.fin th,table.fin td{text-align:left;padding:14px 20px;border-bottom:1px solid var(--line)}
+table.fin tbody tr:last-child td{border-bottom:none}
+table.fin td.num{font-family:var(--mono);text-align:right;color:var(--ink);font-weight:500}
+table.fin thead th{font-weight:700;color:var(--ink);background:var(--card)}
+footer{background:var(--deep);color:oklch(0.76 0.008 var(--Hn));padding:56px 0 28px}
+.fls{padding:32px 0 0;font-size:.78rem;line-height:1.7;color:oklch(0.68 0.008 var(--Hn));max-width:98ch} .fls b{color:oklch(0.85 0.01 var(--Hn))}
+.fls a{color:inherit;text-decoration:underline} .fls+.fls{padding-top:14px}
+.market-note{padding-top:18px;margin-top:18px;border-top:1px solid var(--line-d);font-size:.72rem;line-height:1.7;color:oklch(0.68 0.008 var(--Hn))}
+/* reveal: hidden only once motion.js has set html.js, so no-JS and JS failure show everything.
+   Direction variants set --reveal-from (components/motion-extra.css); stagger with style="--d:.08s". */
+.reveal{transition:opacity .65s var(--ease),transform .65s var(--ease);transition-delay:var(--d,0s)}
+.js .reveal:not(.in){opacity:0;transform:var(--reveal-from,translateY(20px))}
+/* motif pause: motion.js toggles .paused on #hero-motif off-screen, in a hidden tab, or via [data-motif-toggle] */
+.paused,.paused::before,.paused::after,.paused *,.paused *::before,.paused *::after{animation-play-state:paused!important}
+@media (max-width:900px){
+  .nav-burger{display:flex}
+  .nav-links{position:absolute;top:72px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:2px;background:var(--paper);border-bottom:1px solid var(--line);padding:12px 22px 20px;opacity:0;transform:translateY(-10px);visibility:hidden;pointer-events:none;transition:opacity .28s var(--ease),transform .28s var(--ease),visibility .28s;box-shadow:0 16px 30px oklch(0.3 0.02 var(--Hn)/.08)}
+  .nav-links.open{opacity:1;transform:none;visibility:visible;pointer-events:auto}
+  .nav-links li{width:100%} .nav-links a:not(.btn){display:block;padding:12px 0} .nav-links .btn{margin-top:10px;display:inline-flex}
+}
+@media (max-width:768px){ .footer-links a,.contact-col a{min-height:44px;display:flex;align-items:center} }   /* 44px tap targets; (0,1,1) so layer.css can restyle */
+@media (prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto!important}
+  .reveal{transition:none} .js .reveal:not(.in){opacity:1;transform:none}
+  .btn:hover{transform:none} [class*="motif"]{animation:none!important} [data-motif-toggle]{display:none}
+}
+/* print (D12): decoration off, every reveal shown, dark bands re-inked dark-on-white (backgrounds may not print).
+   A custom dark band must carry .sec-dark so this, its focus ring and its heading colour all apply. */
+@media print{
+  *,*::before,*::after{background-image:none!important;box-shadow:none!important;text-shadow:none!important;animation:none!important;transition:none!important}
+  .site-nav{position:static} .nav-burger,.skip-link,[data-motif-toggle]{display:none!important}
+  .js .reveal:not(.in){opacity:1!important;transform:none!important}
+  .sec-dark,.sec-dark *,.hero,.hero *,.snapshot,.snapshot *,footer,footer *{background-color:transparent!important;color:#111!important;border-color:#bbb!important}
+  .sec-white,.sec-tint,.sec-dark,footer{background-color:#fff!important;border-top:1px solid #bbb}
+  .btn{background:transparent!important;color:#111!important;border-color:#111!important}
+  .table-scroll{overflow:visible;background:#fff!important}
+  main>section{padding:28px 0}
+}
+/* forced colors: the UA repaints every band to Canvas, so bands get a system seam instead */
+@media (forced-colors:active){
+  .sec-white,.sec-tint,.sec-dark,footer{background-image:none;border-top:1px solid CanvasText}
+  .btn{border-color:ButtonText}
+  .nav-burger span{forced-color-adjust:none;background:CanvasText}
+  .table-scroll{border-color:CanvasText}
+}
+/* mc:nav (computed: the listing chip stops fitting beside logo + burger) */
+@media (max-width:380px){.nav-tick{display:none}}
+/* mc:component stats */
+/* stats: E1 stats band, the snapshot/stats coverage slot, 3 to 5 stats. Band: dark (section.snapshot.sec-dark).
+   Integrity: every .stat carries a .stat-src provenance line or it is not printed; hairlines are the 1px grid gap. */
+.stats-band{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:1px;background:var(--line-d);border:1px solid var(--line-d);border-radius:12px;overflow:hidden}
+.stat{background:var(--deep);padding:24px 20px;display:flex;flex-direction:column;gap:6px}
+.stat-num{font-family:var(--mono);font-size:clamp(1.5rem,3.2vw,2.1rem);font-weight:600;line-height:1;letter-spacing:-.02em;color:#fff;font-variant-numeric:tabular-nums}
+.stat-num em{font-style:normal;color:var(--accent-lt)}
+.stat-label{font-size:.8rem;color:oklch(0.78 0.008 var(--Hn))}
+.stat-src{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:oklch(0.72 0.008 var(--Hn))}
+/* mc:component spec */
+/* spec: E3 spec card (dl of label/value rows). Band: either (light default, .sec-dark variant).
+   Integrity: rows are <div class="spec-row"><dt><dd></div> (valid dl); at 360px the value wraps under its label by design. */
+.spec-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:clamp(20px,3vw,28px)}
+.spec-card h3{margin-bottom:6px}
+.spec-list{display:grid;margin-top:16px}
+.spec-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 16px;padding:12px 0;border-bottom:1px solid var(--line)}
+.spec-row:last-child{border-bottom:none}
+.spec-row dt{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-mid)}
+.spec-row dd{font-family:var(--mono);font-size:.82rem;color:var(--accent-ink);text-align:right}
+.sec-dark .spec-card{background:oklch(0.98 0.02 var(--H)/.04);border-color:var(--line-d)}
+.sec-dark .spec-row{border-bottom-color:var(--line-d)}
+.sec-dark .spec-row dt{color:oklch(0.78 0.008 var(--Hn))}
+.sec-dark .spec-row dd{color:var(--accent-lt)}
+/* mc:component diff */
+/* diff: E5 numbered differentiator cards 01 to 06. Band: dark (.sec-dark).
+   Integrity: six is the ceiling, ship only the real ones; one sentence of substance each, never a slogan. */
+.diff-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:1px;background:var(--line-d);border:1px solid var(--line-d);border-radius:14px;overflow:hidden}
+.diff-card{background:var(--deep);padding:clamp(22px,3vw,30px)}
+.diff-num{display:block;font-family:var(--mono);font-size:.78rem;letter-spacing:.16em;color:var(--accent-lt);margin-bottom:14px}
+.diff-card h3{margin-bottom:10px}
+.diff-card p{font-size:.92rem;line-height:1.65;color:oklch(0.76 0.008 var(--Hn));max-width:46ch}
+/* mc:component timeline */
+/* timeline: E7 press and filings timeline grouped by year, newest first. Band: light (.sec-white / .sec-tint).
+   Integrity: every href is a URL you observed (no constructed detail pages; fall back to the news index or EDGAR);
+   headlines exactly as filed. Sticky year top:96px clears the 72px nav. */
+.news-year{display:grid;grid-template-columns:96px 1fr;gap:0 24px;align-items:start;border-top:1px solid var(--line);padding:22px 0 0;margin-top:22px}
+.news-year:first-child{border-top:none;padding:0;margin-top:0}
+.news-yr{position:sticky;top:96px;font-family:var(--mono);font-size:.9rem;font-weight:600;color:var(--text-mid)}
+.news-list{list-style:none;display:grid}
+.news-item{display:grid;grid-template-columns:118px 1fr auto;gap:4px 18px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}
+.news-item:last-child{border-bottom:none}
+.news-item time{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--text-mid)}
+.news-link{display:flex;align-items:center;gap:8px;min-height:44px;font-size:1rem;color:var(--ink);transition:color .2s var(--ease)}
+.news-link:hover{color:var(--accent-ink)}
+.news-link .arw{font-family:var(--mono);transition:transform .2s var(--ease)}
+.news-link:hover .arw{transform:translateX(3px)}
+.news-tag{justify-self:start;font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-ink);background:var(--accent-lo);padding:4px 8px;border-radius:4px}
+@media (max-width:640px){
+  .news-year{grid-template-columns:1fr;gap:12px}
+  .news-yr{position:static}
+  .news-item{grid-template-columns:1fr;gap:2px;padding:10px 0}
+}
+/* mc:component contact */
+/* contact: E9 IR contact grid. Band: either (light default, .sec-dark variant).
+   Integrity: headings are h3, never h4 (verify FAILs any h4); omit any unverified row (phone, transfer agent); the
+   EDGAR link is the edgar placeholder. The substrate gives .contact-col a its 44px min-height at <=768px. */
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:28px}
+.contact-col h3{font-family:var(--mono);font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink)}
+.contact-col a,.contact-col p,.contact-col address{display:block;margin-top:12px;font-style:normal;font-size:.95rem;line-height:1.6;color:var(--text)}
+.contact-col a{text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--tint-2);transition:color .2s var(--ease)}
+.contact-col a:hover{color:var(--accent-ink);text-decoration-color:var(--accent)}
+.sec-dark .contact-col h3{color:var(--accent-lt)}
+.sec-dark .contact-col a,.sec-dark .contact-col p,.sec-dark .contact-col address{color:oklch(0.82 0.008 var(--Hn))}
+.sec-dark .contact-col a{text-decoration-color:var(--line-d)}
+.sec-dark .contact-col a:hover{color:#fff;text-decoration-color:var(--accent)}
+/* mc:layer */
+/* Optimi Health: visible layer. Prospectus archetype on the company's own stock: cream paper, a darker tan, warm ink, ochre numerals.
+   Archivo carries the heavy headlines and the narrow caps labels (one variable family, wght + wdth), Source Serif 4 the body,
+   Chivo Mono the figures and provenance. Sharp corners and hairline rules throughout, as on optimi.net. */
+:root{
+  --tan:   oklch(0.905 0.045 94.5);   /* the real #e9e0bf stats band of the company site */
+  --tan-2: oklch(0.865 0.050 93.5);
+  --m: 44px;                           /* one bond length, the module of the structure plates and the surface rulings */
+}
+.nw{white-space:nowrap}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* ---------- type ---------- */
+body{font-size:1.0625rem;line-height:1.62;font-optical-sizing:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:900;font-stretch:100%;letter-spacing:-.022em;line-height:1.04;text-wrap:balance}
+h1{font-size:clamp(1.9rem,3.5vw,2.95rem);max-width:none}
+h2{font-size:clamp(1.65rem,3.1vw,2.45rem);max-width:24ch}
+h3{font-size:clamp(1.02rem,1.5vw,1.22rem);font-weight:800;line-height:1.15;letter-spacing:-.01em}
+.lead{font-size:clamp(1.05rem,1.5vw,1.22rem);line-height:1.55;color:var(--text);max-width:58ch}
+.eyebrow{font-family:var(--serif);font-weight:650;font-stretch:72%;letter-spacing:.2em;font-size:.84rem;color:var(--accent-ink)}
+.eyebrow::before{border-radius:0;width:8px;height:8px}
+.tg{display:inline-block;font-family:var(--mono);font-size:.56rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;line-height:1.5;padding:2px 7px;border-radius:0;vertical-align:.12em;margin-left:3px;white-space:nowrap}
+.tg-f{background:var(--accent-ink);color:#fff}
+.tg-cs{background:transparent;color:var(--accent-ink);box-shadow:inset 0 0 0 1px currentColor}
+.tg-cm{background:var(--ink);color:#fff}
+.tg-site{background:var(--tan-2);color:var(--ink)}
+.sec-dark .tg-f{background:var(--accent-lt);color:var(--deep)}
+.sec-dark .tg-cs{color:var(--accent-lt)}
+.sec-dark .tg-cm{background:oklch(0.96 0.01 85);color:var(--deep)}
+.src{font-family:var(--mono);font-size:.62rem;letter-spacing:.05em;text-transform:uppercase;color:var(--accent-ink);text-decoration:underline;text-decoration-color:var(--tan-2);text-underline-offset:3px;margin-left:6px;white-space:nowrap;transition:text-decoration-color .2s var(--ease)}
+.src:hover{text-decoration-color:currentColor}
+.sec-dark .src{color:var(--accent-lt);text-decoration-color:var(--line-d)}
+.inl{color:var(--accent-ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--tan-2)}
+.inl:hover{text-decoration-color:currentColor}
+.note{font-size:.84rem;line-height:1.6;color:var(--text-mid);margin-top:16px;max-width:92ch}
+.note-dark{color:oklch(0.78 0.012 85)}
+sub{font-size:.7em;line-height:0}
+.arw{white-space:nowrap}
+.nav-links .btn .arw{font-size:0}
+.nav-links .btn .arw::after{content:"\2192";font-size:1rem;font-family:var(--serif)}
+table.fin td.num:not(.nsp)::after{content:")";visibility:hidden}
+
+/* ---------- buttons and nav: rectangular, narrow caps, ink fills ---------- */
+.btn{font-family:var(--serif);font-stretch:78%;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.82rem;border-radius:0;padding:11px 20px}
+.btn-primary{background:var(--ink);color:#fff}
+.btn-primary:hover{background:var(--accent-ink)}
+.btn-ghost{border-color:var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.nav-name{font-family:var(--serif);font-weight:900;font-size:1.28rem;letter-spacing:.09em;text-transform:uppercase;color:var(--ink);display:inline-flex;align-items:center;gap:10px;line-height:1}
+.nav-name::before{content:'';width:32px;height:32px;flex:none;background:url(img/favicon.svg) center/contain no-repeat}
+.nav-tick{border-radius:0;border-color:var(--ink);color:var(--ink);font-family:var(--serif);font-stretch:75%;font-weight:600;letter-spacing:.16em;font-size:.7rem}
+.nav-links a:not(.btn){font-family:var(--serif);font-stretch:76%;font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;color:var(--ink)}
+.nav-links a:not(.btn):hover{color:var(--accent-ink)}
+.site-nav{border-bottom:3px double var(--ink)}
+.concept-note{background:var(--tan-2);color:var(--ink)}
+
+/* ---------- section head: the company's own numbered double-rule head ---------- */
+.dochead{display:flex;align-items:baseline;gap:16px;border-top:3px double var(--ink);padding-top:14px;margin-bottom:clamp(20px,3vw,32px)}
+.dochead .no{font-family:var(--serif);font-weight:900;font-size:1.75rem;line-height:1;letter-spacing:-.03em;color:var(--accent-ink)}
+.dochead .lab{font-family:var(--serif);font-stretch:72%;font-weight:700;font-size:.84rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink)}
+.dochead .meta{margin-left:auto;font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-mid);text-align:right}
+.sec-dark .dochead{border-top-color:oklch(0.96 0.012 85 / .6)}
+.sec-dark .dochead .no{color:var(--accent-lt)}
+.sec-dark .dochead .lab{color:#fff}
+.sec-dark .dochead .meta{color:oklch(0.78 0.012 85)}
+.dochead + h2{margin-bottom:clamp(18px,2.6vw,28px)}
+.doc{display:grid;grid-template-columns:minmax(0,7.4fr) minmax(0,3.6fr);gap:clamp(28px,5vw,64px);align-items:start}
+.prose p{max-width:62ch}
+.prose p + p{margin-top:1em}
+.prose > h2{margin-bottom:clamp(14px,2vw,22px)}
+.note + .table-scroll{margin-top:32px}
+.mlabel{font-family:var(--mono);font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;line-height:1.4;color:var(--accent-ink);margin-bottom:12px}
+.sec-dark .mlabel{color:var(--accent-lt)}
+.margin{border-top:1px solid var(--ink);padding-top:14px;position:sticky;top:96px}
+.mfacts > div{padding:11px 0;border-bottom:1px solid var(--line)}
+.mfacts dt{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-mid)}
+.mfacts dd{font-family:var(--serif);font-weight:800;font-size:1.02rem;line-height:1.25;color:var(--ink);margin-top:3px;letter-spacing:-.005em}
+.margin .note{margin-top:12px}
+
+/* ---------- hero ---------- */
+.hero{padding:clamp(36px,5vw,72px) 0 clamp(44px,6vw,88px)}
+.hero-wrap{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);gap:clamp(28px,5vw,72px);align-items:center}
+.hero-copy .eyebrow{margin-bottom:20px}
+.hero-copy h1{margin-bottom:22px}
+.hero-note{font-size:.98rem;line-height:1.6;color:var(--text-mid);margin-top:14px;max-width:60ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.hero-pause[aria-pressed="true"]{background:var(--tan-2)}
+.plate{margin:0;background:var(--card);border:1px solid var(--ink);position:relative}
+.plate-bar{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:baseline;padding:10px 16px;border-bottom:1px solid var(--ink);font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase}
+.plate-no{color:var(--accent-ink);font-weight:600}
+.plate-name{color:var(--ink)}
+.plate-formula{font-family:var(--mono);letter-spacing:.04em;text-transform:none;color:var(--ink)}
+.plate-art{padding:clamp(14px,2.6vw,30px);color:var(--ink)}
+.plate-art svg{width:100%;height:auto;max-height:520px}
+.plate figcaption{padding:12px 16px;border-top:1px solid var(--line);font-size:.78rem;line-height:1.5;color:var(--text-mid)}
+.motif-flow{stroke:var(--accent);stroke-dasharray:13 87;stroke-dashoffset:0;animation:motif-flow 7.5s linear infinite;animation-delay:calc(var(--i) * -.62s)}
+@keyframes motif-flow{to{stroke-dashoffset:-100}}
+.paused .motif-flow,.user-paused .motif-flow{animation-play-state:paused}
+@media (prefers-reduced-motion:reduce){.motif-flow{opacity:0}}
+
+/* ---------- snapshot (tan stock): the stats component re-inked for a light band ---------- */
+.snapshot.sec-tint{padding:clamp(34px,5vw,56px) 0}
+.snapshot.sec-tint .stats-band{background:var(--ink);border-color:var(--ink);border-radius:0}
+.snapshot.sec-tint .stat{background:var(--card)}
+.snapshot.sec-tint .stat-num{font-family:var(--serif);font-weight:900;font-size:clamp(1.55rem,3vw,2.15rem);letter-spacing:-.03em;color:var(--ink)}
+.snapshot.sec-tint .stat-label{color:var(--text)}
+.snapshot.sec-tint .stat-src{color:var(--text-mid)}
+
+/* ---------- read first ---------- */
+.readfirst{padding-top:clamp(40px,6vw,72px)}
+.notice{background:var(--card);border:1px solid var(--ink);border-top:4px solid var(--accent-ink);border-radius:0;padding:clamp(22px,3vw,38px)}
+.notice h2{font-family:var(--serif);font-stretch:74%;font-weight:700;font-size:.92rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:24px;line-height:1.35;max-width:none}
+.notice ol{list-style:none;counter-reset:rf;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px clamp(24px,3vw,44px)}
+.notice li:first-child{grid-column:1/-1;max-width:88ch}
+.notice li{counter-increment:rf;position:relative;padding-top:52px;font-size:.98rem;line-height:1.62}
+.notice li::before{content:"0" counter(rf);position:absolute;left:0;top:0;font-family:var(--serif);font-weight:900;font-size:2.6rem;line-height:1;letter-spacing:-.04em;color:var(--accent-ink);font-feature-settings:'lnum' 1}
+.notice li b{font-family:var(--serif);font-weight:800;color:var(--ink)}
+.notice .cutoff{margin-top:26px;padding-top:14px;border-top:1px solid var(--line);font-size:.84rem;line-height:1.6;color:var(--text-mid);max-width:none}
+
+/* ---------- company ---------- */
+.people{margin-top:clamp(24px,3vw,36px)}
+.ledger{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(20px,3vw,36px);border-top:1px solid var(--ink)}
+.ledger li{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line)}
+.ini{flex:none;width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--ink);background:var(--card);font-family:var(--serif);font-weight:900;font-size:.98rem;letter-spacing:.02em;color:var(--ink)}
+.who{display:block}
+.who b{display:block;font-family:var(--serif);font-weight:800;font-size:1.02rem;color:var(--ink);line-height:1.2}
+.who span{display:block;font-size:.88rem;line-height:1.45;color:var(--text-mid);margin-top:3px}
+.people .note{margin-top:14px}
+
+/* ---------- manufacturing (dark) ---------- */
+.mfg-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(22px,3vw,40px);align-items:start;margin-top:clamp(22px,3vw,34px)}
+.mfg-grid .diff-grid{grid-template-columns:repeat(2,minmax(0,1fr));border-radius:0}
+.spec-card{border-radius:0}
+.spec-card .eyebrow{color:var(--accent-lt)}
+.sec-dark .spec-row{display:grid;grid-template-columns:minmax(120px,160px) minmax(0,1fr);gap:6px 18px;align-items:start}
+.sec-dark .spec-row dd{font-family:var(--sans);font-size:.92rem;line-height:1.5;color:oklch(0.93 0.012 85);text-align:left}
+.sec-dark .spec-row dt{color:oklch(0.78 0.012 85);padding-top:3px}
+.spec-note{font-size:.82rem;line-height:1.55;color:oklch(0.78 0.012 85);margin-top:16px;max-width:none}
+.mfg-grid .diff-grid{background:transparent;border:1px solid var(--line-d);gap:0}
+.diff-card{background:transparent;border-right:1px solid var(--line-d);border-bottom:1px solid var(--line-d)}
+.mfg-grid .diff-card:nth-child(2n){border-right:0}
+.mfg-grid .diff-card:nth-child(n+3){border-bottom:0}
+.diff-card h3{color:#fff}
+.diff-card p{color:oklch(0.82 0.012 85);font-size:.94rem}
+.diff-num{font-family:var(--serif);font-weight:900;font-size:1.5rem;letter-spacing:-.03em;color:var(--accent-lt)}
+
+/* ---------- products ---------- */
+.prod-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,3vw,36px);align-items:stretch;margin:clamp(20px,3vw,32px) 0}
+.photo{margin:0;background:var(--paper);border:1px solid var(--ink);display:flex;flex-direction:column}
+.photo img{width:100%;height:auto;aspect-ratio:1400/1083;object-fit:cover}
+.photo figcaption{padding:12px 16px;font-size:.78rem;line-height:1.5;color:var(--text-mid);border-top:1px solid var(--line)}
+.plate-sm{display:flex;flex-direction:column}
+.plate-sm .plate-art{flex:1;display:grid;place-items:center}
+table.prod{min-width:0}
+table.fin.prod tbody th[scope="row"]{font-family:var(--serif);font-weight:800;color:var(--ink);width:24%}
+table.prod td{font-size:.9rem;line-height:1.5;vertical-align:top}
+
+/* ---------- tables, shared ---------- */
+.table-scroll{border-radius:0;border-color:var(--ink)}
+table.fin{min-width:0;font-size:.9rem}
+table.fin caption{font-family:var(--serif);font-stretch:74%;font-weight:700;font-size:.8rem;letter-spacing:.16em;color:var(--ink);padding:13px 18px}
+table.fin th,table.fin td{padding:11px 18px;vertical-align:baseline}
+table.fin thead th{border-bottom:2px solid var(--ink);font-family:var(--serif);font-stretch:76%;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.74rem;line-height:1.35}
+table.fin tbody th[scope="row"]{font-weight:500;color:var(--ink);text-align:left}
+table.fin td.num{font-family:var(--mono);font-size:.8rem;white-space:nowrap}
+table.fin thead th.num{text-align:right}
+table.fin tr.sub th{padding-left:34px;font-weight:400;color:var(--text-mid);font-size:.84rem}
+table.fin tr.sub td{color:var(--text-mid)}
+table.fin tr.focal td,table.fin tr.focal th{background:var(--tan)}
+table.fin tr.focal td.num,table.fin tr.focal th{font-weight:600}
+table.fin tbody tr:last-child th{border-bottom:none}
+
+/* ---------- access ---------- */
+.access-lead{margin-bottom:clamp(22px,3vw,34px)}
+.routes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--ink);border:1px solid var(--ink);margin:0 0 clamp(26px,4vw,44px)}
+.route{background:var(--card);padding:clamp(20px,2.6vw,30px)}
+.route-no{display:block;font-family:var(--serif);font-weight:900;font-size:1.7rem;line-height:1;letter-spacing:-.03em;color:var(--accent-ink);margin-bottom:10px}
+.route h3{margin-bottom:10px}
+.route p{font-size:.94rem;line-height:1.6}
+.route p + p{margin-top:.8em}
+.route-closed{background:var(--paper)}
+.route-closed .route-no{color:var(--text-mid)}
+.how{margin-bottom:clamp(28px,4vw,48px)}
+.steps{counter-reset:st;list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;border-top:1px solid var(--ink);padding-top:18px}
+.steps li{counter-increment:st;position:relative;padding-top:46px;font-size:.92rem;line-height:1.55}
+.steps li::before{content:counter(st);position:absolute;left:0;top:0;width:32px;height:32px;display:grid;place-items:center;border:1px solid var(--ink);background:var(--card);font-family:var(--serif);font-weight:900;font-size:.95rem;color:var(--ink)}
+.steps li::after{content:'';position:absolute;left:40px;right:-14px;top:16px;height:1px;background:var(--ink)}
+.steps li:last-child::after{display:none}
+.steps li b{font-family:var(--serif);font-weight:800;color:var(--ink)}
+.geo{margin:0 0 20px}
+.geo-key{display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;color:var(--text)}
+.geo-key .k::before{content:'';display:inline-block;width:12px;height:12px;margin-right:7px;vertical-align:-1px;background:var(--ink)}
+.geo-key .k-anz::before{background:var(--accent-ink)}
+.geo-key .k-uk::before{background:var(--accent)}
+.geo-key .k-oth::before{background:var(--text-mid)}
+.geo-row{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr) auto;gap:14px;align-items:center;padding:8px 0;border-top:1px solid var(--line)}
+.geo-label{font-size:.86rem;line-height:1.3}
+.geo-bar{display:flex;height:34px;gap:2px}
+.seg{flex:var(--w) 1 0;min-width:2px;display:flex;align-items:center;padding-left:9px;font-family:var(--mono);font-size:.68rem;color:#fff;background:var(--ink);overflow:hidden;transform-origin:left;transition:transform .9s var(--ease)}
+.seg-anz{background:var(--accent-ink)}
+.seg-uk{background:var(--accent);color:var(--deep)}
+.seg-oth{background:var(--text-mid)}
+.js .geo.reveal:not(.in) .seg{transform:scaleX(0)}
+.geo-total{font-family:var(--mono);font-size:.74rem;white-space:nowrap;color:var(--text)}
+.geo figcaption{margin-top:12px;font-size:.84rem;line-height:1.6;color:var(--text-mid);max-width:92ch}
+.geo-table{margin-top:0}
+.progs-label{margin:clamp(28px,4vw,44px) 0 14px}
+.progs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.prog{background:var(--card);border:1px solid var(--ink);padding:clamp(20px,2.6vw,28px);display:grid;gap:12px;align-content:start}
+.prog-ph{font-family:var(--mono);font-size:.66rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-ink)}
+.prog-dl > div{display:grid;grid-template-columns:minmax(96px,130px) 1fr;gap:6px 14px;padding:9px 0;border-top:1px solid var(--line)}
+.prog-dl dt{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-mid);padding-top:3px}
+.prog-dl dd{font-size:.92rem;line-height:1.5}
+
+/* ---------- financials ---------- */
+.fin-lead{margin-bottom:clamp(8px,1.4vw,14px)}
+.fin-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,2.4vw,28px);margin-top:clamp(20px,3vw,32px);align-items:start}
+.mix-label{margin:clamp(30px,4vw,48px) 0 12px}
+table.mix{min-width:640px}
+
+/* ---------- funding (the gravest band) ---------- */
+.funding h2{color:#fff}
+.fund-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:clamp(22px,3vw,34px)}
+.fund-grid-2{margin-top:clamp(26px,3.6vw,44px)}
+.fund-card{background:oklch(0.98 0.012 85 / .045);border:1px solid var(--line-d);padding:clamp(20px,3vw,30px)}
+.fund-card h3{color:#fff;margin-bottom:12px}
+.fund-card .eyebrow{color:var(--accent-lt)}
+.fund-dl > div{display:grid;grid-template-columns:minmax(100px,150px) 1fr;gap:6px 16px;padding:10px 0;border-top:1px solid var(--line-d)}
+.fund-dl dt{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:oklch(0.76 0.012 85);padding-top:3px}
+.fund-dl dd{font-size:.94rem;line-height:1.5;color:oklch(0.93 0.012 85)}
+.fund-src{margin-top:14px;font-size:.8rem;max-width:none}
+.fund-p{font-size:.96rem;line-height:1.62;color:oklch(0.9 0.012 85);max-width:none}
+.cq{font-style:italic}
+.cq-dark{margin:clamp(24px,3.4vw,38px) 0;padding:22px 0;border-top:1px solid var(--line-d);border-bottom:1px solid var(--line-d);font-size:1.12rem;line-height:1.6;max-width:84ch;color:oklch(0.93 0.012 85)}
+.dil{margin:clamp(24px,3.4vw,38px) 0}
+.dil .mlabel{margin-bottom:16px}
+.dil-row{display:grid;grid-template-columns:minmax(150px,230px) minmax(0,1fr);gap:14px;align-items:center;margin:12px 0}
+.dil-label{font-size:.86rem;line-height:1.3;color:oklch(0.9 0.012 85)}
+.dil-bar{display:flex;gap:2px;height:42px;position:relative}
+.dseg{flex:none;width:calc(var(--w) / var(--tot) * 100%);min-width:2px;display:flex;align-items:center;padding-left:10px;font-family:var(--mono);font-size:.7rem;white-space:nowrap;overflow:hidden;transform-origin:left;transition:transform 1s var(--ease)}
+.dseg-now{background:oklch(0.93 0.02 85);color:var(--deep)}
+.dseg-new{background:var(--accent);color:var(--deep)}
+.js .dil.reveal:not(.in) .dseg{transform:scaleX(0)}
+.dil-total{position:absolute;right:0;top:-18px;font-family:var(--mono);font-size:.7rem;color:oklch(0.9 0.012 85)}
+.dil figcaption{font-size:.84rem;line-height:1.6;color:oklch(0.8 0.012 85);max-width:92ch;margin-top:12px}
+.funding .table-scroll{color:var(--text);margin-top:clamp(24px,3.4vw,38px)}
+table.hold td:last-child{font-size:.84rem}
+.funding .table-scroll .tg-f{background:var(--accent-ink);color:#fff}
+.funding .table-scroll .src{color:var(--accent-ink);text-decoration-color:var(--tan-2)}
+.fund-col{display:grid;gap:20px;align-content:start}
+
+/* ---------- filings, contact, footer ---------- */
+.fil-lead{margin-bottom:clamp(20px,3vw,30px);font-size:1rem}
+.news-year{border-top:1px solid var(--ink)}
+.news-yr{font-family:var(--serif);font-weight:900;font-size:1.5rem;color:var(--accent-ink)}
+.news-item{border-bottom-color:var(--line)}
+.news-link{font-size:.96rem;line-height:1.4;padding:6px 0}
+.news-tag{border-radius:0;background:var(--card);color:var(--accent-ink);box-shadow:inset 0 0 0 1px var(--tan-2)}
+.contact .contact-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));border-top:1px solid var(--ink);padding-top:22px}
+.contact .contact-col h3{font-family:var(--serif);font-stretch:74%;font-weight:700;font-size:.84rem;letter-spacing:.18em;color:var(--accent-ink)}
+.contact .contact-col a,.contact .contact-col p,.contact .contact-col address{color:var(--text)}
+.contact .contact-col a{text-decoration-color:var(--tan-2)}
+.contact .contact-col a:hover{color:var(--accent-ink);text-decoration-color:var(--accent-ink)}
+.contact .c-note{font-size:.82rem;line-height:1.55;color:var(--text-mid)}
+.contact .c-note a{display:inline;margin:0 0 0 6px;font-size:.62rem;min-height:0}
+.contact .c-note-first{margin-top:12px}
+.foot-brand{display:inline-block;margin-bottom:22px;line-height:1}
+.foot-name{font-family:var(--serif);font-weight:900;font-size:1.3rem;letter-spacing:.09em;text-transform:uppercase;color:#fff}
+.footer-links{display:flex;flex-wrap:wrap;gap:8px 28px;list-style:none;padding:0;margin-bottom:22px}
+.footer-links a{font-size:.9rem;color:oklch(0.92 0.012 85);text-decoration:underline;text-decoration-color:var(--line-d);text-underline-offset:4px}
+.footer-links a:hover{text-decoration-color:currentColor}
+.method{font-size:.78rem;line-height:1.7;color:oklch(0.8 0.012 85);max-width:98ch}
+
+/* ---------- responsive ---------- */
+@media (max-width:1040px){
+  .notice ol{grid-template-columns:minmax(0,1fr)}
+  .notice li:first-child{max-width:none}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps li:nth-child(2)::after{display:none}
+}
+@media (max-width:900px){
+  .hero-wrap,.doc,.mfg-grid,.prod-top,.fin-pair,.fund-grid,.progs{grid-template-columns:minmax(0,1fr)}
+  .margin{position:static}
+  .dochead{flex-wrap:wrap;gap:4px 14px}
+  .dochead .meta{margin-left:0;text-align:left;flex-basis:100%}
+  .plate{max-width:560px}
+}
+@media (max-width:640px){
+  .ledger,.routes,.mfg-grid .diff-grid{grid-template-columns:minmax(0,1fr)}
+  .mfg-grid .diff-card{border-right:0;border-bottom:1px solid var(--line-d)}
+  .mfg-grid .diff-card:last-child{border-bottom:0}
+  .sec-dark .spec-row{grid-template-columns:minmax(0,1fr);gap:2px}
+  .steps{grid-template-columns:minmax(0,1fr)}
+  .steps li::after{display:none}
+  .geo-row,.dil-row{grid-template-columns:minmax(0,1fr);gap:6px}
+  .dil-row{margin-bottom:30px}
+  .dil-total{top:auto;bottom:-22px}
+  table.hold{min-width:560px}
+  .geo-total{justify-self:start}
+  .prog-dl > div,.fund-dl > div{grid-template-columns:minmax(0,1fr);gap:2px}
+  table.fin th,table.fin td{padding:9px 12px}
+  table.fin tr.sub th{padding-left:22px}
+  table.fin td.num{font-size:.74rem}
+  table.fin thead th{font-size:.66rem;letter-spacing:.06em}
+  .nav-name{font-size:1.1rem}
+  .nav-name::before{width:28px;height:28px}
+}
+@media print{
+  .motif-flow{display:none}
+  .hero-pause{display:none}
+}
+/* mc:surface */
+/* Optimi Health: surface system, "letterpress pharmacopoeia". The page is a printed monograph from a small pharmaceutical press, and every
+   device is one a label printer already owns: five stocks that really are different papers, running heads with dotted leaders,
+   plates with crop marks and a colour-control strip in the company's own four inks, a tipped-in photograph with photo corners.
+   Stocks: cream WOVE (fine fibre, rag flecks, slow mottle), tan LAID (white laid and chain lines), ink BOOKCLOTH (a fine weave and a
+   blind-stamped frame), the gravest band an ACCOUNT BOOK (ruled lines and a double margin rule), the footer the back board.
+   Polarity flip (ir-build.md 5a): printed dark trim only on cream; BLIND WHITE on tan; negative (white at very low alpha) on dark.
+   Layer order on light stock: washes first (on top), then trim, then fibre last (under). Every texture is validated on the bare stock:
+   tan carries only lightening layers, so text-mid on tan stays at its bare 4.73:1. Trim rules sit 11px inside each band edge,
+   unreachable by text because .wrap is 100% - 44px. No glow, no blur, no new hue. */
+:root{
+  --text-mid:    oklch(0.455 0.004 67.2);          /* a touch darker than tokens.css: texture needs headroom on every light stock */
+  --edge:        oklch(0.30 0.020 67.2 / 0.26);     /* printed trim on cream stock */
+  --edge-w:      oklch(1.00 0.000 0 / 0.85);        /* blind white trim on the tan */
+  --edge-n:      oklch(0.98 0.012 62.3 / 0.16);     /* negative trim on dark */
+  --sheet-edge:  oklch(0.40 0.091 62.3 / 0.26);
+  --blind:       oklch(1.00 0.000 0 / 0.5);
+  --blind-k:     oklch(1.00 0.000 0 / 0.85);
+  --sheet-neg:   oklch(0.98 0.012 62.3 / 0.05);
+  --wash:        oklch(0.972 0.016 93.1);           /* head wash, the paper's own hue */
+  --deep-2:      oklch(0.165 0.008 67.2);           /* the gravest band: darker than --deep */
+  --laid:        oklch(1.00 0.000 0 / 0.11);        /* tan: laid lines (1px in 4px) and chain lines (2px in 220px), white only */
+  --chain:       oklch(1.00 0.000 0 / 0.13);
+  --cloth:       oklch(1.00 0.000 0 / 0.022);        /* ink band: bookcloth weave, 1px in 3px both ways */
+  --rule-n:      oklch(0.98 0.012 62.3 / 0.035);    /* gravest band: ledger rules */
+  --mark:        oklch(0.26 0.004 67.2 / 0.62);     /* crop marks, registration and control-strip frame on cream */
+  --ring:        oklch(0.30 0.020 67.2 / 0.34);     /* plate mark, shaded side */
+  --lit:         oklch(1.00 0.000 0 / 0.95);        /* plate mark, lit side */
+  --leader:      oklch(0.30 0.010 67.2 / 0.55);
+  --leader-n:    oklch(0.98 0.012 62.3 / 0.42);
+  /* the company's four inks, real values: cream paper, tan, ochre, warm ink (the control strip on each plate) */
+  --ink-cream:   oklch(0.942 0.027 93.1);
+  --ink-tan:     oklch(0.905 0.045 94.5);
+  --ink-ochre:   oklch(0.493 0.103 62.3);
+  --ink-warm:    oklch(0.203 0.010 67.2);
+  /* paper fibre, rag flecks, slow mottle (ochre, cream stock only) and white fibre (tan); 220 to 800px tiles, seamless */
+  --grain:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' seed='1' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .36 0 0 0 0 .24 0 0 0 0 .08 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23n%29'/%3E%3C/svg%3E");
+  --mottle: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='800'%3E%3Cfilter id='n' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.007' numOctaves='3' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .36 0 0 0 0 .24 0 0 0 0 .08 0 0 0 .1 -.016'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23n%29'/%3E%3C/svg%3E");
+    --grain-w:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' seed='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .26 -.05'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23n%29'/%3E%3C/svg%3E");
+}
+
+/* 1. cream WOVE (hero, notice, products, financials, contact): a cut line, a head wash, printed trim, then flecks, mottle and grain */
+.sec-white{
+  background-color:var(--paper);
+  background-image:
+    linear-gradient(var(--edge),var(--edge)),
+    linear-gradient(to bottom,var(--wash) 0,transparent 230px),
+    linear-gradient(var(--edge),var(--edge)),
+    linear-gradient(var(--edge),var(--edge)),
+    var(--mottle),var(--grain);
+  background-repeat:no-repeat,no-repeat,no-repeat,no-repeat,repeat,repeat;
+  background-position:0 0,0 0,11px 0,calc(100% - 11px) 0,0 0,0 0;
+  background-size:100% 1px,100% 100%,1px 100%,1px 100%,800px 800px,220px 220px;
+}
+/* the frontispiece sits straight under the nav's double rule, so it carries no cut line of its own */
+.hero.sec-white{
+  background-image:
+    linear-gradient(to bottom,var(--wash) 0,transparent 230px),
+    linear-gradient(var(--edge),var(--edge)),
+    linear-gradient(var(--edge),var(--edge)),
+    var(--mottle),var(--grain);
+  background-repeat:no-repeat,no-repeat,no-repeat,repeat,repeat;
+  background-position:0 0,11px 0,calc(100% - 11px) 0,0 0,0 0;
+  background-size:100% 100%,1px 100%,1px 100%,800px 800px,220px 220px;
+}
+
+/* 2. tan LAID (snapshot, company, access, filings): white laid lines and chain lines, white trim, white fibre.
+   Every layer lightens the stock, so no wash is needed to rescue contrast and the bare tan stays the floor. */
+.sec-tint{
+  background-color:var(--tan);
+  background-image:
+    linear-gradient(var(--edge-w),var(--edge-w)),
+    linear-gradient(var(--edge-w),var(--edge-w)),
+    linear-gradient(var(--edge-w),var(--edge-w)),
+    linear-gradient(to bottom,var(--laid) 0 1px,transparent 1px),
+    linear-gradient(to right,var(--chain) 0 2px,transparent 2px),
+    var(--grain-w);
+  background-repeat:no-repeat,no-repeat,no-repeat,repeat,repeat,repeat;
+  background-position:0 0,11px 0,calc(100% - 11px) 0,0 0,0 0,0 0;
+  background-size:100% 2px,1px 100%,1px 100%,100% 4px,264px 100%,200px 200px;
+}
+
+/* 3. ink BOOKCLOTH (manufacturing): a weave in negative, a blind-stamped frame 11px inside every edge */
+.sec-dark{
+  background-color:var(--deep);
+  background-image:
+    linear-gradient(var(--edge-n),var(--edge-n)),
+    linear-gradient(var(--edge-n),var(--edge-n)),
+    linear-gradient(var(--edge-n),var(--edge-n)),
+    linear-gradient(var(--edge-n),var(--edge-n)),
+    linear-gradient(to bottom,var(--cloth) 0 1px,transparent 1px),
+    linear-gradient(to right,var(--cloth) 0 1px,transparent 1px);
+  background-repeat:no-repeat,no-repeat,no-repeat,no-repeat,repeat,repeat;
+  background-position:11px 0,calc(100% - 11px) 0,0 11px,0 calc(100% - 11px),0 0,0 0;
+  background-size:1px 100%,1px 100%,100% 1px,100% 1px,100% 3px,3px 100%;
+}
+
+/* 4. the gravest band (funding), an ACCOUNT BOOK: ruled lines at one bond length and a double margin rule down each edge.
+   Horizontal rules at 3.5% white leave the text tokens untouched (the lines fall between text lines at 44px). */
+.sec-dark.sec-grave{
+  background-color:var(--deep-2);
+  background-image:
+    linear-gradient(var(--edge-n),var(--edge-n)),
+    linear-gradient(var(--edge-n),var(--edge-n)),
+    linear-gradient(var(--edge-n),var(--edge-n)),
+    linear-gradient(var(--edge-n),var(--edge-n)),
+    linear-gradient(var(--edge-n),var(--edge-n)),
+    linear-gradient(to bottom,var(--rule-n) 0 1px,transparent 1px);
+  background-repeat:no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,repeat;
+  background-position:11px 0,15px 0,calc(100% - 11px) 0,calc(100% - 15px) 0,0 0,0 0;
+  background-size:1px 100%,1px 100%,1px 100%,1px 100%,100% 1px,100% 44px;
+}
+
+footer .fls,footer .market-note,footer .method{color:oklch(0.80 0.008 85)}
+footer .fls b{color:oklch(0.90 0.01 85)}
+/* the footer is the back board: the same cloth as the ink band, a cut line on top */
+footer{
+  background-image:
+    linear-gradient(var(--edge-n),var(--edge-n)),
+    linear-gradient(to bottom,var(--cloth) 0 1px,transparent 1px),
+    linear-gradient(to right,var(--cloth) 0 1px,transparent 1px);
+  background-repeat:no-repeat,repeat,repeat;
+  background-position:0 0,0 0,0 0;
+  background-size:100% 1px,100% 3px,3px 100%;
+}
+
+/* table plates stay opaque; no ruling behind data (verify.sh checks .table-scroll) */
+.table-scroll{background:var(--card)}
+
+/* ---------------------------------------------------------------------------------------------------------------------------
+   Running heads: a thick-thin rule, the folio numeral, the label, a dotted leader to the note on the right.
+   --------------------------------------------------------------------------------------------------------------------------- */
+.dochead{position:relative;border-top:0;padding-top:24px;gap:0 14px;align-items:baseline}
+.dochead::before{content:"";position:absolute;left:0;right:0;top:0;height:7px;
+  background:linear-gradient(var(--ink),var(--ink)) 0 0/100% 3px no-repeat,linear-gradient(var(--ink),var(--ink)) 0 6px/100% 1px no-repeat}
+.dochead .no{order:0;font-size:2.8rem;letter-spacing:-.045em;line-height:.9;font-variant-numeric:lining-nums tabular-nums;padding-right:14px;border-right:1px solid var(--ink)}
+.dochead .lab{order:1}
+.dochead::after{content:"";order:2;flex:1 1 28px;min-width:28px;height:4px;margin:0 2px;
+  background:radial-gradient(circle at 50% 50%,var(--leader) .9px,transparent 1.25px) 0 100%/7px 4px repeat-x}
+.dochead .meta{order:3;margin-left:0}
+.sec-dark .dochead::before{background:linear-gradient(oklch(0.96 0.012 85 / .62),oklch(0.96 0.012 85 / .62)) 0 0/100% 3px no-repeat,linear-gradient(oklch(0.96 0.012 85 / .62),oklch(0.96 0.012 85 / .62)) 0 6px/100% 1px no-repeat}
+.sec-dark .dochead .no{border-right-color:oklch(0.96 0.012 85 / .5)}
+.sec-dark .dochead::after{background-image:radial-gradient(circle at 50% 50%,var(--leader-n) .9px,transparent 1.25px)}
+.dochead + h2{margin-top:2px}
+
+/* ---------------------------------------------------------------------------------------------------------------------------
+   Plates: Figure 1 and Figure 2. The structure sits in a keyline, the engraved caption runs beneath it (figure, name, leader, formula),
+   a plate mark is pressed into the paper around it, and crop marks and the control strip stand outside the trim.
+   --------------------------------------------------------------------------------------------------------------------------- */
+.plate{display:flex;flex-direction:column}
+.plate-art{order:1;box-shadow:inset 0 0 0 8px var(--card),inset 0 0 0 9px var(--edge)}
+.plate-bar{order:2;display:flex;align-items:baseline;gap:0 12px;border-top:1px solid var(--ink);border-bottom:1px solid var(--line);padding:11px 16px 10px}
+.plate-bar::after{content:"";order:2;flex:1 1 20px;min-width:20px;height:4px;margin:0 2px;
+  background:radial-gradient(circle at 50% 50%,var(--leader) .9px,transparent 1.25px) 0 100%/7px 4px repeat-x}
+.plate-formula{order:3}
+.plate figcaption{order:3;border-top:0}
+.plate::before,.photo::before{content:"";position:absolute;inset:-9px;border:1px solid;border-color:var(--lit) var(--ring) var(--ring) var(--lit);pointer-events:none}
+.plate::after{content:"";position:absolute;inset:-30px;pointer-events:none;
+  background:
+    linear-gradient(var(--mark),var(--mark)) 0 30px/15px 1px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) 30px 0/1px 15px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) 100% 30px/15px 1px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) calc(100% - 31px) 0/1px 15px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) 0 calc(100% - 31px)/15px 1px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) 30px 100%/1px 15px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) 100% calc(100% - 31px)/15px 1px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) calc(100% - 31px) 100%/1px 15px no-repeat,
+    /* the control strip: the four inks, in order, framed */
+    linear-gradient(to right,var(--ink-cream) 0 25%,var(--ink-tan) 25% 50%,var(--ink-ochre) 50% 75%,var(--ink-warm) 75% 100%) calc(100% - 52px) calc(100% - 10px)/72px 9px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) calc(100% - 53px) calc(100% - 9px)/74px 11px no-repeat;
+}
+/* the hero plate also carries a registration target above its top edge */
+#hero-motif::after{
+  background:
+    linear-gradient(var(--mark),var(--mark)) 0 30px/15px 1px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) 30px 0/1px 15px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) 100% 30px/15px 1px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) calc(100% - 31px) 0/1px 15px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) 0 calc(100% - 31px)/15px 1px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) 30px 100%/1px 15px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) 100% calc(100% - 31px)/15px 1px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) calc(100% - 31px) 100%/1px 15px no-repeat,
+    linear-gradient(to right,var(--ink-cream) 0 25%,var(--ink-tan) 25% 50%,var(--ink-ochre) 50% 75%,var(--ink-warm) 75% 100%) calc(100% - 52px) calc(100% - 10px)/72px 9px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) calc(100% - 53px) calc(100% - 9px)/74px 11px no-repeat,
+    radial-gradient(circle,transparent 7px,var(--mark) 7px 8px,transparent 8px) 50% 4px/18px 18px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) 50% 12px/28px 1px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) 50% 0/1px 26px no-repeat;
+}
+
+/* the tipped-in photograph: a mat, the print's own edge, and four photo corners in ink */
+.photo{position:relative;padding:26px 26px 0;background:var(--card)}
+.prod-top{margin:clamp(24px,3vw,36px) 0 clamp(44px,5vw,60px)}
+.photo img{box-shadow:0 0 0 1px var(--edge);margin-bottom:26px}
+.photo figcaption{margin:auto -26px 0}
+.photo::after{content:"";position:absolute;left:26px;right:26px;top:26px;aspect-ratio:1400/1083;pointer-events:none;
+  background:
+    linear-gradient(135deg,var(--ink) 0 50%,transparent 50%) left top/30px 30px no-repeat,
+    linear-gradient(225deg,var(--ink) 0 50%,transparent 50%) right top/30px 30px no-repeat,
+    linear-gradient(45deg,var(--ink) 0 50%,transparent 50%) left bottom/30px 30px no-repeat,
+    linear-gradient(315deg,var(--ink) 0 50%,transparent 50%) right bottom/30px 30px no-repeat}
+
+/* ---------------------------------------------------------------------------------------------------------------------------
+   Source tags as colophon marks: an Archivo narrow caps stamp with an inner keyline; the filing code is a dotted-underline folio reference.
+   --------------------------------------------------------------------------------------------------------------------------- */
+.tg{font-family:var(--serif);font-stretch:68%;font-weight:700;font-size:.7rem;letter-spacing:.16em;line-height:1.5;padding:2px 7px 1px;outline:1px solid transparent;outline-offset:-3px}
+.tg-f{outline-color:oklch(1 0 0 / .5)}
+.tg-cs{outline-color:color-mix(in oklch,currentColor 28%,transparent)}
+.tg-cm{outline-color:oklch(1 0 0 / .4)}
+.sec-dark .tg-cm{outline-color:oklch(0.2 0.01 67 / .4)}
+.sec-dark .tg-f{outline-color:oklch(0.2 0.01 67 / .4)}
+.tg-site{outline-color:oklch(0.26 0.004 67 / .4)}
+.src{text-decoration-style:dotted;text-decoration-color:currentColor;text-decoration-thickness:1px}
+.sec-dark .src{text-decoration-color:oklch(0.85 0.082 62.3 / .6)}
+
+/* the filings index: headline, a dotted leader, the form type */
+.news-link{align-items:baseline}
+.news-link::after{content:"";order:3;flex:1 1 0;min-width:0;height:4px;margin-left:6px;
+  background:radial-gradient(circle at 50% 50%,var(--leader) .9px,transparent 1.25px) 0 100%/7px 4px repeat-x}
+@media (max-width:640px){.news-link::after{display:none}}
+
+/* the colophon: the four inks once more, at the foot of the book */
+.foot-brand::after{content:"";display:inline-block;vertical-align:.18em;margin-left:20px;width:72px;height:9px;outline:1px solid oklch(0.98 0.012 62.3 / .45);outline-offset:1px;
+  background:linear-gradient(to right,var(--ink-cream) 0 25%,var(--ink-tan) 25% 50%,var(--ink-ochre) 50% 75%,var(--ink-warm) 75% 100%)}
+
+/* ---------------------------------------------------------------------------------------------------------------------------
+   Ledger rows: the label, a dotted leader, the value. Stacked again on a phone.
+   --------------------------------------------------------------------------------------------------------------------------- */
+.sec-dark .spec-row,.fund-dl > div,.prog-dl > div{display:flex;flex-wrap:nowrap;align-items:baseline;gap:0 8px}
+.sec-dark .spec-row dt,.fund-dl dt,.prog-dl dt{order:0;flex:0 1 auto;max-width:calc(40% - 16px);padding-top:0}
+.sec-dark .spec-row::after,.fund-dl > div::after,.prog-dl > div::after{content:"";order:1;flex:1 1 0;min-width:0;height:4px;
+  background:radial-gradient(circle at 50% 50%,var(--leader) .9px,transparent 1.25px) 0 100%/7px 4px repeat-x}
+.sec-dark .spec-row::after,.fund-dl > div::after{background-image:radial-gradient(circle at 50% 50%,var(--leader-n) .9px,transparent 1.25px)}
+.sec-dark .spec-row dd,.fund-dl dd,.prog-dl dd{order:2;flex:0 0 60%;min-width:0}
+@media (max-width:640px){
+  .sec-dark .spec-row,.fund-dl > div,.prog-dl > div{display:grid;grid-template-columns:minmax(0,1fr);gap:2px}
+  .sec-dark .spec-row::after,.fund-dl > div::after,.prog-dl > div::after{display:none}
+  .sec-dark .spec-row dt,.fund-dl dt,.prog-dl dt{max-width:none}
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------
+   Tables as plates: a plate mark pressed around each, an accounting rule under the total.
+   Polarity: dark ring on cream, blind white on tan, negative on the dark bands.
+   --------------------------------------------------------------------------------------------------------------------------- */
+.table-scroll{outline:1px solid var(--ring);outline-offset:5px}
+.sec-tint .table-scroll,.sec-tint .stats-band{outline:1px solid var(--edge-w);outline-offset:5px}
+.sec-dark .table-scroll{outline:1px solid var(--edge-n);outline-offset:5px}
+table.fin tr.focal th,table.fin tr.focal td{border-top:1px solid var(--ink)}
+.notice{box-shadow:inset 0 0 0 6px var(--card),inset 0 0 0 7px var(--edge)}
+.btn:hover{transform:translateY(1px)}
+
+/* initials and step markers take the plate's inner keyline */
+.ini,.steps li::before{box-shadow:inset 0 0 0 3px var(--card),inset 0 0 0 4px var(--edge)}
+
+/* focus stays loud: the plate-mark outline above must never replace the focus ring on a scrolling table */
+.table-scroll:focus-visible{outline:2px solid var(--accent-ink);outline-offset:3px}
+.sec-dark .table-scroll:focus-visible{outline-color:var(--accent-lt)}
+
+@media (max-width:900px){
+  .plate::before,.photo::before{inset:-6px}
+  .plate::after{inset:-18px;background:
+    linear-gradient(var(--mark),var(--mark)) 0 18px/10px 1px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) 18px 0/1px 10px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) 100% 18px/10px 1px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) calc(100% - 19px) 0/1px 10px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) 0 calc(100% - 19px)/10px 1px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) 18px 100%/1px 10px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) 100% calc(100% - 19px)/10px 1px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) calc(100% - 19px) 100%/1px 10px no-repeat}
+  #hero-motif::after{inset:-18px;background:
+    linear-gradient(var(--mark),var(--mark)) 0 18px/10px 1px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) 18px 0/1px 10px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) 100% 18px/10px 1px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) calc(100% - 19px) 0/1px 10px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) 0 calc(100% - 19px)/10px 1px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) 18px 100%/1px 10px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) 100% calc(100% - 19px)/10px 1px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) calc(100% - 19px) 100%/1px 10px no-repeat}
+  .dochead::after{display:none}
+  .dochead .no{font-size:2.3rem}
+  .photo{padding:18px 18px 0}
+  .photo img{margin-bottom:18px}
+  .photo figcaption{margin:auto -18px 0}
+  .photo::after{left:18px;right:18px;top:18px}
+}
+
+@media print{
+  .sec-white,.sec-tint,.sec-dark,.sec-dark.sec-grave,footer{background-image:none}
+  .sec-dark,.sec-dark.sec-grave{background-color:#fff;color:#111}
+  .sec-dark *{color:#111!important;fill:#111}
+  .dochead{border-top:3px double #111}
+  .plate::before,.plate::after,.photo::before,.photo::after,.dochead::before,.dochead::after{display:none}
+}
+@media (forced-colors:active){
+  /* background-image is dropped in forced colours; the bands keep their edges instead, the decoration goes */
+  .sec-white,.sec-tint,.sec-dark,.sec-dark.sec-grave,footer{border-block:1px solid CanvasText}
+  .plate::before,.plate::after,.photo::before,.photo::after,.dochead::before,.dochead::after{display:none}
+  .dochead{border-top:3px double CanvasText}
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------
+   Labels in the company's own voice: narrow Archivo caps (optimi.net sets its labels this way), not monospace. Figures, dates and filing
+   codes stay in Chivo Mono, where tabular alignment earns it.
+   --------------------------------------------------------------------------------------------------------------------------- */
+.mlabel,.dochead .meta,.plate-bar,.prog-ph,.fund-dl dt,.prog-dl dt,.mfacts dt,.sec-dark .spec-row dt,.geo-key,.news-tag{
+  font-family:var(--serif);font-stretch:72%;font-weight:650;letter-spacing:.15em;text-transform:uppercase}
+.mlabel,.dochead .meta,.prog-ph,.fund-dl dt,.prog-dl dt,.mfacts dt,.sec-dark .spec-row dt,.geo-key,.news-tag{font-size:.76rem}
+.plate-bar{font-size:.78rem}
+.plate-formula{font-family:var(--serif);font-stretch:100%;font-weight:600;letter-spacing:.02em;text-transform:none}
+.geo-key{font-size:.78rem}
+
+/* ---------------------------------------------------------------------------------------------------------------------------
+   Hard cells: the snapshot is four plain cells under a heavy outer rule; the figures are set large in condensed Archivo 900.
+   --------------------------------------------------------------------------------------------------------------------------- */
+.snapshot.sec-tint .stats-band{border:2px solid var(--ink);gap:1px}
+.snapshot.sec-tint .stat{padding:24px 22px 24px}
+.snapshot.sec-tint .stat-num{font-stretch:78%;font-size:clamp(1.9rem,3.7vw,3rem);line-height:.95;letter-spacing:-.03em;margin-bottom:4px}
+@media (max-width:640px){.snapshot.sec-tint .stat-num{font-size:clamp(1.6rem,7.4vw,2.2rem)}}
+
+/* ---------------------------------------------------------------------------------------------------------------------------
+   Grafts from the panel.
+   B: provenance by shape as well as colour (filled square FILED, open square COMPANY STATEMENT, half square COMPUTED, dotted square
+      COMPANY SITE); the ochre FIGURE tab; the indole position numbers on Figure 1 (aria-hidden, they fade in once).
+   C: the four access routes as manila tags with a punched hole, in the real tan.
+   D: a wide table's title stays on screen while the table scrolls (width follows the wrapper, not the viewport).
+   --------------------------------------------------------------------------------------------------------------------------- */
+.tg{display:inline-flex;align-items:center;gap:5px;vertical-align:.12em}
+.tg::before{content:"";flex:none;width:7px;height:7px;box-shadow:inset 0 0 0 1px currentColor}
+.tg-f::before{background:currentColor}
+.tg-cm::before{background:linear-gradient(to top right,currentColor 50%,transparent 50%)}
+.tg-site::before{background:linear-gradient(currentColor,currentColor) 50% 50%/3px 3px no-repeat}
+
+.plate-no{background:var(--accent-ink);color:#fff;font-weight:700;padding:3px 9px;margin-right:2px}
+
+.motif-loc text{font-family:var(--serif);font-weight:700;font-size:11px;fill:var(--accent-ink);text-anchor:middle}
+.motif-loc{animation:motif-read 1.2s var(--ease)}
+@keyframes motif-read{from{opacity:0}}
+@media print{.motif-loc{animation:none}}
+
+.route-no{position:relative;display:grid;place-items:end center;width:42px;height:56px;padding-bottom:7px;margin-bottom:16px;
+  background:var(--tan);border:1px solid var(--ink);font-size:1.45rem}
+.route-no::before{content:"";position:absolute;top:7px;left:50%;width:8px;height:8px;margin-left:-4px;border:1px solid var(--ink);border-radius:50%;background:var(--card)}
+
+.table-scroll{container-type:inline-size}
+@media (max-width:900px){
+  table.fin caption{position:sticky;left:0;width:calc(100vw - 48px);width:100cqw}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="concept-note">Independent design concept. Not affiliated with Optimi Health Corp. Official investor relations: <a href="https://ir.optimi.net" target="_blank" rel="noopener">ir.optimi.net</a></div>
+
+<header class="site-nav">
+  <div class="wrap nav-inner">
+    <a class="nav-brand" href="#hero"><span class="nav-name">Optimi Health</span><span class="nav-tick">Nasdaq: OPTH</span></a>
+    <nav aria-label="Primary">
+      <button class="nav-burger" id="nav-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#company">Company</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#access">Access</a></li>
+        <li><a href="#financials">Financials</a></li>
+        <li><a href="#funding">Funding</a></li>
+        <li><a href="#filings">Filings</a></li>
+        <li><a class="btn btn-primary" href="#contact">Contact IR <span class="arw" aria-hidden="true">-&gt;</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<!-- ============ 00 HERO (white stock): the structure plate is the one pausable motif; the identity headline is the filed description ============ -->
+<section id="hero" class="hero sec-white" aria-labelledby="hero-h">
+  <div class="wrap hero-wrap">
+    <div class="hero-copy">
+      <p class="eyebrow"><span><span class="nw">Optimi Health Corp.</span> &middot; <span class="nw">Nasdaq: OPTH</span> &middot; <span class="nw">CSE: OPTI</span> &middot; <span class="nw">Princeton, British Columbia</span></span></p>
+      <h1 id="hero-h">Optimi Health manufactures MDMA and psilocybin drug products under Health Canada licences.</h1>
+      <p class="lead">&ldquo;We are a Canadian GMP compliant, pharmaceutical drug manufacturer licensed by Health Canada for the handling of controlled substances and GMP production.&rdquo; <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a></p>
+      <p class="hero-note">The company&rsquo;s press releases call it &ldquo;a commercial-stage pharmaceutical manufacturer of regulated psychedelic drug products.&rdquo; <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326005973/f6k_091026.htm" target="_blank" rel="noopener">6-K, Sep 10</a> Reported revenue was C$239,700 in the nine months ended Jun 30, 2026 and C$426,301 in the year ended Sep 30, 2025, in Canadian dollars. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326005554/f6k_081426.htm" target="_blank" rel="noopener">6-K, Aug 14</a> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a></p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#readfirst">Read first <span class="arw" aria-hidden="true">&darr;</span></a>
+        <a class="btn btn-ghost" href="https://ir.optimi.net" target="_blank" rel="noopener">Official investor site <span class="arw" aria-hidden="true">&nearr;</span></a>
+        <button class="btn btn-ghost hero-pause" type="button" data-motif-toggle aria-pressed="false">Pause motion</button>
+      </div>
+    </div>
+    <figure id="hero-motif" class="plate">
+      <div class="plate-bar"><span class="plate-no">Figure 1</span><span class="plate-name">Psilocybin</span><span class="plate-formula" aria-label="C12 H17 N2 O4 P">C<sub>12</sub>H<sub>17</sub>N<sub>2</sub>O<sub>4</sub>P</span></div>
+      <div class="plate-art"><svg class="fig-psi" viewBox="90 52 310 276" role="img" aria-labelledby="fig-psi-t fig-psi-d" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-psi-t">Skeletal formula of psilocybin</title><desc id="fig-psi-d">Skeletal structure of psilocybin: an indole ring system carrying a dimethylaminoethyl chain at position 3 and a phosphate ester at position 4. Formula C12H17N2O4P.</desc><g class="spec-lay" aria-hidden="true"><g class="motif-loc"><text x="143" y="203">4</text><text x="108" y="222">5</text><text x="108" y="278">6</text><text x="160" y="310">7</text><text x="221" y="298">1</text><text x="280" y="253">2</text><text x="230" y="201">3</text></g></g>
+<g class="bonds" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+<line x1="160.0" y1="206.0" x2="198.1" y2="228.0"/>
+<line x1="198.1" y1="228.0" x2="198.1" y2="272.0"/>
+<line x1="191.3" y1="234.5" x2="191.3" y2="265.5"/>
+<line x1="198.1" y1="272.0" x2="160.0" y2="294.0"/>
+<line x1="160.0" y1="294.0" x2="121.9" y2="272.0"/>
+<line x1="157.8" y1="284.9" x2="130.9" y2="269.4"/>
+<line x1="121.9" y1="272.0" x2="121.9" y2="228.0"/>
+<line x1="121.9" y1="228.0" x2="160.0" y2="206.0"/>
+<line x1="130.9" y1="230.6" x2="157.8" y2="215.1"/>
+<line x1="198.1" y1="272.0" x2="229.5" y2="282.2"/>
+<line x1="246.4" y1="276.7" x2="265.8" y2="250.0"/>
+<line x1="265.8" y1="250.0" x2="239.9" y2="214.4"/>
+<line x1="256.5" y1="248.7" x2="238.3" y2="223.7"/>
+<line x1="239.9" y1="214.4" x2="198.1" y2="228.0"/>
+<line x1="239.9" y1="214.4" x2="261.9" y2="176.3"/>
+<line x1="261.9" y1="176.3" x2="305.9" y2="176.3"/>
+<line x1="305.9" y1="176.3" x2="322.4" y2="147.7"/>
+<line x1="338.9" y1="138.2" x2="371.9" y2="138.2"/>
+<line x1="322.4" y1="128.7" x2="305.9" y2="100.1"/>
+<line x1="160.0" y1="206.0" x2="160.0" y2="173.0"/>
+<line x1="160.0" y1="151.0" x2="160.0" y2="129.0"/>
+<line x1="149.0" y1="114.8" x2="127.0" y2="114.8"/>
+<line x1="149.0" y1="121.2" x2="127.0" y2="121.2"/>
+<line x1="171.0" y1="118.0" x2="193.0" y2="118.0"/>
+<line x1="160.0" y1="107.0" x2="160.0" y2="85.0"/>
+</g>
+<g class="motif-flow-layer" fill="none" stroke-width="2.6" stroke-linecap="round" aria-hidden="true">
+<line class="motif-flow" style="--i:0" pathLength="100" x1="160.0" y1="206.0" x2="198.1" y2="228.0"/>
+<line class="motif-flow" style="--i:1" pathLength="100" x1="198.1" y1="228.0" x2="198.1" y2="272.0"/>
+<line class="motif-flow" style="--i:2" pathLength="100" x1="191.3" y1="234.5" x2="191.3" y2="265.5"/>
+<line class="motif-flow" style="--i:3" pathLength="100" x1="198.1" y1="272.0" x2="160.0" y2="294.0"/>
+<line class="motif-flow" style="--i:4" pathLength="100" x1="160.0" y1="294.0" x2="121.9" y2="272.0"/>
+<line class="motif-flow" style="--i:5" pathLength="100" x1="157.8" y1="284.9" x2="130.9" y2="269.4"/>
+<line class="motif-flow" style="--i:6" pathLength="100" x1="121.9" y1="272.0" x2="121.9" y2="228.0"/>
+<line class="motif-flow" style="--i:7" pathLength="100" x1="121.9" y1="228.0" x2="160.0" y2="206.0"/>
+<line class="motif-flow" style="--i:8" pathLength="100" x1="130.9" y1="230.6" x2="157.8" y2="215.1"/>
+<line class="motif-flow" style="--i:9" pathLength="100" x1="198.1" y1="272.0" x2="229.5" y2="282.2"/>
+<line class="motif-flow" style="--i:10" pathLength="100" x1="246.4" y1="276.7" x2="265.8" y2="250.0"/>
+<line class="motif-flow" style="--i:11" pathLength="100" x1="265.8" y1="250.0" x2="239.9" y2="214.4"/>
+<line class="motif-flow" style="--i:12" pathLength="100" x1="256.5" y1="248.7" x2="238.3" y2="223.7"/>
+<line class="motif-flow" style="--i:13" pathLength="100" x1="239.9" y1="214.4" x2="198.1" y2="228.0"/>
+<line class="motif-flow" style="--i:14" pathLength="100" x1="239.9" y1="214.4" x2="261.9" y2="176.3"/>
+<line class="motif-flow" style="--i:15" pathLength="100" x1="261.9" y1="176.3" x2="305.9" y2="176.3"/>
+<line class="motif-flow" style="--i:16" pathLength="100" x1="305.9" y1="176.3" x2="322.4" y2="147.7"/>
+<line class="motif-flow" style="--i:17" pathLength="100" x1="338.9" y1="138.2" x2="371.9" y2="138.2"/>
+<line class="motif-flow" style="--i:18" pathLength="100" x1="322.4" y1="128.7" x2="305.9" y2="100.1"/>
+<line class="motif-flow" style="--i:19" pathLength="100" x1="160.0" y1="206.0" x2="160.0" y2="173.0"/>
+<line class="motif-flow" style="--i:20" pathLength="100" x1="160.0" y1="151.0" x2="160.0" y2="129.0"/>
+<line class="motif-flow" style="--i:21" pathLength="100" x1="149.0" y1="114.8" x2="127.0" y2="114.8"/>
+<line class="motif-flow" style="--i:22" pathLength="100" x1="149.0" y1="121.2" x2="127.0" y2="121.2"/>
+<line class="motif-flow" style="--i:23" pathLength="100" x1="171.0" y1="118.0" x2="193.0" y2="118.0"/>
+<line class="motif-flow" style="--i:24" pathLength="100" x1="160.0" y1="107.0" x2="160.0" y2="85.0"/>
+</g>
+<g class="atoms" font-family="var(--serif)" font-weight="700" font-size="19" fill="currentColor" text-anchor="middle" aria-hidden="true">
+<text x="239.9" y="292.1">N</text>
+<text x="240.9" y="314.1"><tspan font-size="15" font-weight="600">H</tspan></text>
+<text x="327.9" y="144.7">N</text>
+<text x="160.0" y="168.5">O</text>
+<text x="160.0" y="124.5">P</text>
+<text x="116.0" y="124.5">O</text>
+<text x="206.0" y="124.5">O<tspan font-size="12" dy="-7">&#8722;</tspan></text>
+<text x="164.0" y="80.5">OH</text>
+</g></svg></div>
+      <figcaption>Skeletal formula of psilocybin, redrawn for this concept page. The company&rsquo;s illustrative product image on its home page shows a structure and formula on its psilocybin label. <span class="tg tg-site">Company site</span> <a class="src" href="https://www.optimi.net/" target="_blank" rel="noopener">Home page</a></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ 01 SNAPSHOT (tint): four filed figures, each with its date, currency and filing ============ -->
+<section id="snapshot" class="snapshot sec-tint" aria-label="Key figures">
+  <div class="wrap">
+    <div class="stats-band">
+      <div class="stat reveal" style="--d:.04s">
+        <span class="stat-num">C$13.1M</span>
+        <span class="stat-label">Cash at Jun 30, 2026, after the May 2026 offering</span>
+        <span class="stat-src"><span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326005554/f6k_081426.htm" target="_blank" rel="noopener">6-K, Aug 14</a></span>
+      </div>
+      <div class="stat reveal" style="--d:.1s">
+        <span class="stat-num">C$239,700</span>
+        <span class="stat-label">Revenue, nine months ended Jun 30, 2026 (C$490,330 a year earlier)</span>
+        <span class="stat-src"><span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326005554/f6k_081426.htm" target="_blank" rel="noopener">6-K, Aug 14</a></span>
+      </div>
+      <div class="stat reveal" style="--d:.16s">
+        <span class="stat-num">C$5.55M</span>
+        <span class="stat-label">Loss and comprehensive loss, nine months ended Jun 30, 2026</span>
+        <span class="stat-src"><span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326005554/f6k_081426.htm" target="_blank" rel="noopener">6-K, Aug 14</a></span>
+      </div>
+      <div class="stat reveal" style="--d:.22s">
+        <span class="stat-num">5,725,867</span>
+        <span class="stat-label">Common shares outstanding on Jun 30, 2026, after the 1-for-30 reverse split</span>
+        <span class="stat-src"><span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326005554/f6k_081426.htm" target="_blank" rel="noopener">6-K, Aug 14</a></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 READ FIRST (white): always visible, no .reveal; the documents are quoted side by side, never reconciled ============ -->
+<section id="readfirst" class="readfirst sec-white" aria-label="Read first">
+  <div class="wrap">
+    <div class="notice" role="note">
+      <h2>Read first: what the filings say about going concern, funding, debt and revenue</h2>
+      <ol>
+        <li><b>Going concern.</b> The documents disagree, and this page does not reconcile them. <i>Doubt:</i> the auditor&rsquo;s report on the statements for the years ended September 30, 2025 and 2024 (Davidson &amp; Company LLP, dated May 19, 2026) has a going-concern paragraph saying the company &ldquo;has suffered recurring losses from operations and has not yet achieved profitable operations that raise substantial doubt about its ability to continue as a going concern.&rdquo; <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a> The August 27, 2026 prospectus risk factor says: &ldquo;We have suffered recurring losses from operations and have a net capital deficiency that raise substantial doubt about our ability to continue as a going concern.&rdquo; Its MD&amp;A says: &ldquo;These uncertainties cast significant doubt on the Company&rsquo;s ability to continue as a going concern.&rdquo; <i>Sufficiency:</i> the interim statements furnished August 14, 2026 say management &ldquo;has concluded that the Company has sufficient cash resources and expected cash flows to continue its operations and meet its obligations as they become due for at least the next twelve months from the date of these financial statements,&rdquo; <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326005554/f6k_081426.htm" target="_blank" rel="noopener">6-K, Aug 14</a> as did the statements furnished June 2. <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000119312526251855/d119379d6k.htm" target="_blank" rel="noopener">6-K, Jun 2, MD&A</a> The prospectus also estimates that its cash and the funds raised in its offering &ldquo;will be sufficient to fund operations for the next 12 months,&rdquo; and adds that &ldquo;our operating plan has changed, and may continue to change.&rdquo; <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a> A September 10 press release says of the Phase 2 trial: &ldquo;we can comfortably fund it with current cash on hand.&rdquo; <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326005973/f6k_091026.htm" target="_blank" rel="noopener">6-K, Sep 10</a> Cash was C$106,711 at Mar 31, 2026, before the May 2026 offering, and C$13,073,333 at Jun 30, 2026. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000119312526251855/d119379d6k.htm" target="_blank" rel="noopener">6-K, Jun 2, MD&A</a> Working capital was C$(6,657,383) at Sep 30, 2025 and C$5,879,279 at Jun 30, 2026. <span class="tg tg-cm">Computed</span></li>
+        <li><b>Funding.</b> On August 13, 2026 the company signed an equity line with Seven Knots, LLC for up to US$100,000,000 of common shares, sold at the company&rsquo;s discretion at 97% of the lower of two reference prices, up to US$2,000,000 per draw. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026090286/ea0302258-6k_optimi.htm" target="_blank" rel="noopener">6-K, Aug 14, equity line</a> The August 27 prospectus registers up to 21,943,260 common shares for resale by Seven Knots, against 5,725,867 shares outstanding. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a> <a class="inl" href="#funding">Read the funding section</a></li>
+        <li><b>Debt owed to directors&rsquo; companies.</b> The balance sheet at Jun 30, 2026 shows C$3,000,000 of 15% convertible debentures and C$1,584,178 due to related parties, which the MD&amp;A says includes C$470,692 of accrued interest on the debentures. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326005554/f6k_081426.htm" target="_blank" rel="noopener">6-K, Aug 14</a> The debentures were issued on July 24, 2025 to Catcher Investments Ltd. and Cathay Visions Enterprises Ltd., companies controlled by directors. On June 29, 2026 Cathay Visions converted its 450 debentures (C$450,000) into 100,000 common shares, which leaves the 3,000 debentures (C$3,000,000) that Catcher holds. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a> They had a stated maturity of July 24, 2026 &ldquo;unless extended by and at the option of the holders for a further twelve months.&rdquo; The prospectus of August 27 still lists 3,000 debentures outstanding, and no later filing cited on this page says whether they were extended, converted or repaid.</li>
+        <li><b>Revenue fell, and its mix changed.</b> Revenue was C$239,700 in the nine months to Jun 30, 2026 against C$490,330 a year earlier. The company says revenue &ldquo;decreased compared to the prior-year period primarily because demand from pharmacies and clinics in Australia was fulfilled through the sell-through of product previously exported by the Company and already landed in-market, resulting in fewer new shipments during the period.&rdquo; <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326005554/f6k_081426.htm" target="_blank" rel="noopener">6-K, Aug 14</a> The 424B3 splits revenue by nature: drug products and licensing were C$359,753 (73%) in the nine months to Jun 30, 2025 and C$239,700 (100%) in the latest nine months, and nutraceutical products were C$130,577 (27%) a year earlier and nil now. The company says it is &ldquo;in the process of permanently winding down&rdquo; the nutraceutical segment. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a> All of the latest nine months&rsquo; revenue came from Australia and New Zealand (C$136,000) and the United Kingdom (C$103,700). The 424B3 prints their shares as 62.2% and 37.8%, but those amounts are 56.7% and 43.3% of the total. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a> <span class="tg tg-cm">Computed</span></li>
+      </ol>
+      <p class="cutoff">Cut-off: the newest filing used is the Form 6-K of October 20, 2026, a press release; the Schedule 13G/A of October 5, 2026 supplies one holder&rsquo;s figures. EDGAR was last checked on October 20, 2026. <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326006705/f6k_102026.htm" target="_blank" rel="noopener">6-K, Oct 20</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 COMPANY (tint): numbered section 01, main text and a margin ledger; directors and officers by initials, no photographs ============ -->
+<section id="company" class="company sec-tint" aria-labelledby="company-h">
+  <div class="wrap">
+    <header class="dochead"><span class="no" aria-hidden="true">01</span><span class="lab">The company</span><span class="meta">Incorporated 2020 &middot; British Columbia</span></header>
+    <div class="doc">
+      <div class="main prose">
+        <h2 id="company-h">The company.</h2>
+        <p>Optimi Health Corp. was incorporated under the Business Corporations Act (British Columbia) on May 27, 2020 and took its current name on August 17, 2020. The prospectus prints its earlier name two ways: 1251418 B.C. Ltd. in the summary and business sections, and 1251417 B.C. Ltd. in note 1 to the financial statements. It owns Optimi Labs Inc., its operating subsidiary for the manufacturing facilities, Optimi Nutraceuticals Corp. and Optimi Australia Pty. Ltd. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a></p>
+        <p>The shares trade on Nasdaq as OPTH. The prospectus under which the company offered 2,400,000 common shares at US$6.25 was filed May 20, 2026, and a 1-for-30 reverse share split took effect on May 19, 2026. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000119312526231760/d43258d424b4.htm" target="_blank" rel="noopener">424B4, May 20</a> The prospectus also lists the shares on the Canadian Securities Exchange as OPTI and on the Frankfurt Stock Exchange as 8BN. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a></p>
+        <p>Optimi is a foreign private issuer and files Forms 6-K. The prospectus says it will file an annual report on Form 20-F within four months after each fiscal year end; none had been filed on EDGAR when this page was last checked on October 20, 2026. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a></p>
+        <div class="people reveal">
+          <h3 class="mlabel">Directors and officers, as filed</h3>
+          <ul class="ledger">
+            <li><span class="ini" aria-hidden="true">DS</span><span class="who"><b>Dane Stevens</b><span>Chief Executive Officer, Chief Marketing Officer and Director; Corporate Secretary from September 29, 2026</span></span></li>
+            <li><span class="ini" aria-hidden="true">JS</span><span class="who"><b>Jacob Safarik</b><span>Interim Chief Financial Officer and Director</span></span></li>
+            <li><span class="ini" aria-hidden="true">BS</span><span class="who"><b>Bryan Safarik</b><span>Chief Operating Officer and Director</span></span></li>
+            <li><span class="ini" aria-hidden="true">JW</span><span class="who"><b>John James Wilson</b><span>Chairman</span></span></li>
+            <li><span class="ini" aria-hidden="true">JM</span><span class="who"><b>Jason Mosberian</b><span>Independent Director</span></span></li>
+            <li><span class="ini" aria-hidden="true">MP</span><span class="who"><b>Melanie Pump</b><span>Director, appointed September 29, 2026</span></span></li>
+            <li><span class="ini" aria-hidden="true">MB</span><span class="who"><b>Michael Blough, Ph.D.</b><span>Chief Clinical Development Officer, appointed September 22, 2026</span></span></li>
+          </ul>
+          <p class="note">From the prospectus management table, updated by the two September 2026 appointments. At the prospectus date the board had five directors, one of them independent (Jason Mosberian); the audit committee is Mr. Mosberian, John James Wilson and Dane Stevens, and the company says it relies on the Nasdaq phase-in exemption for a fully independent audit committee. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326006164/f6k_092226.htm" target="_blank" rel="noopener">6-K, Sep 22</a> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326006275/f6k_092826.htm" target="_blank" rel="noopener">6-K, Sep 29</a></p>
+        </div>
+      </div>
+      <aside class="margin" aria-label="Company facts">
+        <h3 class="mlabel">In the margin</h3>
+        <dl class="mfacts">
+          <div><dt>Incorporated</dt><dd>May 27, 2020</dd></div>
+          <div><dt>Fiscal year end</dt><dd>September 30</dd></div>
+          <div><dt>Listings</dt><dd>Nasdaq OPTH<br>CSE OPTI<br>FSE 8BN</dd></div>
+          <div><dt>Principal executive office</dt><dd>Princeton, British Columbia, per the 6-K cover</dd></div>
+          <div><dt>Auditor</dt><dd>Davidson &amp; Company LLP, since 2024</dd></div>
+        </dl>
+        <p class="note"><span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326006705/f6k_102026.htm" target="_blank" rel="noopener">6-K, Oct 20</a></p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 MANUFACTURING (dark): the licence record as a spec card, four company statements as numbered cards ============ -->
+<section id="manufacturing" class="manufacturing sec-dark" aria-labelledby="mfg-h">
+  <div class="wrap">
+    <header class="dochead"><span class="no" aria-hidden="true">02</span><span class="lab">Manufacturing and licences</span><span class="meta">Princeton, British Columbia</span></header>
+    <h2 id="mfg-h">Where the products are made, and under which licences.</h2>
+    <div class="mfg-grid">
+      <div class="spec-card reveal">
+        <span class="eyebrow">Licence record</span>
+        <h3>As the prospectus describes it</h3>
+        <dl class="spec-list">
+          <div class="spec-row"><dt>Drug Establishment Licence</dt><dd>Awarded May 24, 2024 by Health Canada</dd></div>
+          <div class="spec-row"><dt>Dealer&rsquo;s Licence</dt><dd>Narcotic Control Regulations: up to 20 kg of psilocybin, 200 g of psilocin and 2 kg of MDMA</dd></div>
+          <div class="spec-row"><dt>Precursor Licence</dt><dd>Import of 3,4-Methylenedioxyphenyl-2-propanone, used in MDMA synthesis</dd></div>
+          <div class="spec-row"><dt>Facilities</dt><dd>Two production facilities of about 10,000 sq ft each, Princeton, B.C.</dd></div>
+          <div class="spec-row"><dt>Land</dt><dd>Ground lease with BC Green, a related party, to June 30, 2030, with three five-year renewal options; C$4,300 a month for the first twelve months of the extended term, adjusted for inflation from July 1, 2026; title to the facilities vests in BC Green when the lease ends</dd></div>
+        </dl>
+        <p class="spec-note"><span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a> Bryan Safarik and Jacob Safarik, two of the company&rsquo;s directors and officers, also serve BC Green as director and president and chief operating officer, and as chief financial officer, respectively, and own around 13.7% and 14.2% of its equity. BC Green holds 100,000 Optimi shares.</p>
+      </div>
+      <div class="diff-grid">
+        <article class="diff-card reveal" style="--d:.04s">
+          <span class="diff-num" aria-hidden="true">01</span>
+          <h3>Vertically integrated</h3>
+          <p>&ldquo;With a vertically integrated approach, we own two approximately 10,000-square-foot production facilities on leased land in Princeton, British Columbia and operate under a DEL awarded by Health Canada.&rdquo; <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a></p>
+        </article>
+        <article class="diff-card reveal" style="--d:.1s">
+          <span class="diff-num" aria-hidden="true">02</span>
+          <h3>A licence for export</h3>
+          <p>&ldquo;Canadian companies without a DEL may not be issued export permits to supply Australia or other countries where a market is established.&rdquo; <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a></p>
+        </article>
+        <article class="diff-card reveal" style="--d:.16s">
+          <span class="diff-num" aria-hidden="true">03</span>
+          <h3>Stability data</h3>
+          <p>&ldquo;Our product is stable over extended periods in HDPE (High Density Polyethylene) bottles at room temperature under both real-time and accelerated storage conditions for up to 24 months for all chemical and microbial attributes,&rdquo; the company says of its MDMA capsules. For the psilocybin active ingredient it reports potency kept through nine months of stability testing in one place and &ldquo;one year stability testing&rdquo; confirmed in another. <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a></p>
+        </article>
+        <article class="diff-card reveal" style="--d:.22s">
+          <span class="diff-num" aria-hidden="true">04</span>
+          <h3>Matching placebos</h3>
+          <p>&ldquo;For each of the active products, we also have developed matching placebo capsules in order to facilitate clinical trials of our clients.&rdquo; <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a></p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 PRODUCTS (white): the one real photograph, Figure 2, and the strengths as a real table ============ -->
+<section id="products" class="products sec-white" aria-labelledby="prod-h">
+  <div class="wrap">
+    <header class="dochead"><span class="no" aria-hidden="true">03</span><span class="lab">Products</span><span class="meta">As the prospectus describes them</span></header>
+    <h2 id="prod-h">The product line.</h2>
+    <div class="prod-top">
+      <figure class="photo">
+        <img src="img/product-line.jpg" width="1400" height="1083" alt="Three capsule bottles with cream labels showing skeletal chemical structures: natural psilocybin extract in olive, MDMA 60 mg in periwinkle, and MDMA 40 mg in teal." loading="lazy">
+        <figcaption>The company&rsquo;s own product image. Its page says &ldquo;Product images are for illustrative purposes only and do not reflect final commercial packaging, labeling, or presentation.&rdquo; <span class="tg tg-site">Company site</span> <a class="src" href="https://www.optimi.net/" target="_blank" rel="noopener">Home page</a></figcaption>
+      </figure>
+      <figure class="plate plate-sm" id="fig2">
+        <div class="plate-bar"><span class="plate-no">Figure 2</span><span class="plate-name">MDMA</span><span class="plate-formula" aria-label="C11 H15 N O2">C<sub>11</sub>H<sub>15</sub>NO<sub>2</sub></span></div>
+        <div class="plate-art"><svg class="fig-mdma" viewBox="100 160 346 150" role="img" aria-labelledby="fig-mdma-t fig-mdma-d" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-mdma-t">Skeletal formula of MDMA</title><desc id="fig-mdma-d">Skeletal structure of MDMA: a methylenedioxy-substituted benzene ring carrying a methylamphetamine side chain. Formula C11H15NO2.</desc>
+<g class="bonds" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+<line x1="230.0" y1="196.0" x2="268.1" y2="218.0"/>
+<line x1="232.2" y1="205.1" x2="259.1" y2="220.6"/>
+<line x1="268.1" y1="218.0" x2="268.1" y2="262.0"/>
+<line x1="268.1" y1="262.0" x2="230.0" y2="284.0"/>
+<line x1="259.1" y1="259.4" x2="232.2" y2="274.9"/>
+<line x1="230.0" y1="284.0" x2="191.9" y2="262.0"/>
+<line x1="191.9" y1="262.0" x2="191.9" y2="218.0"/>
+<line x1="198.7" y1="255.5" x2="198.7" y2="224.5"/>
+<line x1="191.9" y1="218.0" x2="230.0" y2="196.0"/>
+<line x1="191.9" y1="218.0" x2="160.5" y2="207.8"/>
+<line x1="143.6" y1="213.3" x2="124.2" y2="240.0"/>
+<line x1="124.2" y1="240.0" x2="143.6" y2="266.7"/>
+<line x1="160.5" y1="272.2" x2="191.9" y2="262.0"/>
+<line x1="268.1" y1="218.0" x2="306.2" y2="196.0"/>
+<line x1="306.2" y1="196.0" x2="344.3" y2="218.0"/>
+<line x1="344.3" y1="218.0" x2="344.3" y2="262.0"/>
+<line x1="344.3" y1="218.0" x2="372.9" y2="201.5"/>
+<line x1="391.9" y1="201.5" x2="420.5" y2="218.0"/>
+</g>
+<g class="motif-flow-layer" fill="none" stroke-width="2.6" stroke-linecap="round" aria-hidden="true">
+<line class="motif-flow" style="--i:0" pathLength="100" x1="230.0" y1="196.0" x2="268.1" y2="218.0"/>
+<line class="motif-flow" style="--i:1" pathLength="100" x1="232.2" y1="205.1" x2="259.1" y2="220.6"/>
+<line class="motif-flow" style="--i:2" pathLength="100" x1="268.1" y1="218.0" x2="268.1" y2="262.0"/>
+<line class="motif-flow" style="--i:3" pathLength="100" x1="268.1" y1="262.0" x2="230.0" y2="284.0"/>
+<line class="motif-flow" style="--i:4" pathLength="100" x1="259.1" y1="259.4" x2="232.2" y2="274.9"/>
+<line class="motif-flow" style="--i:5" pathLength="100" x1="230.0" y1="284.0" x2="191.9" y2="262.0"/>
+<line class="motif-flow" style="--i:6" pathLength="100" x1="191.9" y1="262.0" x2="191.9" y2="218.0"/>
+<line class="motif-flow" style="--i:7" pathLength="100" x1="198.7" y1="255.5" x2="198.7" y2="224.5"/>
+<line class="motif-flow" style="--i:8" pathLength="100" x1="191.9" y1="218.0" x2="230.0" y2="196.0"/>
+<line class="motif-flow" style="--i:9" pathLength="100" x1="191.9" y1="218.0" x2="160.5" y2="207.8"/>
+<line class="motif-flow" style="--i:10" pathLength="100" x1="143.6" y1="213.3" x2="124.2" y2="240.0"/>
+<line class="motif-flow" style="--i:11" pathLength="100" x1="124.2" y1="240.0" x2="143.6" y2="266.7"/>
+<line class="motif-flow" style="--i:12" pathLength="100" x1="160.5" y1="272.2" x2="191.9" y2="262.0"/>
+<line class="motif-flow" style="--i:13" pathLength="100" x1="268.1" y1="218.0" x2="306.2" y2="196.0"/>
+<line class="motif-flow" style="--i:14" pathLength="100" x1="306.2" y1="196.0" x2="344.3" y2="218.0"/>
+<line class="motif-flow" style="--i:15" pathLength="100" x1="344.3" y1="218.0" x2="344.3" y2="262.0"/>
+<line class="motif-flow" style="--i:16" pathLength="100" x1="344.3" y1="218.0" x2="372.9" y2="201.5"/>
+<line class="motif-flow" style="--i:17" pathLength="100" x1="391.9" y1="201.5" x2="420.5" y2="218.0"/>
+</g>
+<g class="atoms" font-family="var(--serif)" font-weight="700" font-size="19" fill="currentColor" text-anchor="middle" aria-hidden="true">
+<text x="150.1" y="210.9">O</text>
+<text x="150.1" y="282.1">O</text>
+<text x="382.4" y="202.5">N</text>
+<text x="382.4" y="181.5"><tspan font-size="15" font-weight="600">H</tspan></text>
+</g></svg></div>
+        <figcaption>Skeletal formula of MDMA, redrawn for this concept page. The company&rsquo;s illustrative product image on its home page shows a structure and formula on its MDMA labels. <span class="tg tg-site">Company site</span> <a class="src" href="https://www.optimi.net/" target="_blank" rel="noopener">Home page</a></figcaption>
+      </figure>
+    </div>
+    <div class="table-scroll reveal">
+      <table class="fin prod">
+        <caption>Products and strengths, as described in the 424B3 and the June 16, 2026 press release</caption>
+        <thead><tr><th scope="col">Product</th><th scope="col">Strengths</th><th scope="col">Form</th><th scope="col">Supplied for</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">MDMA capsules</th><td>40 mg and 60 mg</td><td>Hard gelatine capsule, oral</td><td>Patients in Australia&rsquo;s Authorised Prescribers Scheme, and licensed entities running clinical trials. The capsules conform to the Australian TGO 112 standard for MDMA.</td></tr>
+          <tr><th scope="row">Natural psilocybin extract capsules</th><td>5 mg for patients in Australia; 10 mg for clinical studies</td><td>Hard HPMC capsule, oral</td><td>Qualified patients with treatment-resistant depression in the Authorised Prescribers Scheme, and clinical trials. The capsules conform to the Australian TGO 113 standard for psilocybin.</td></tr>
+          <tr><th scope="row">Microdose psilocybin finished drug products</th><td>1 mg and 2 mg</td><td>Naturally derived finished drug products</td><td>Qualified, authorized clinical research organizations; the company announced them on June 16, 2026.</td></tr>
+          <tr><th scope="row">Matching placebo capsules</th><td>Mannitol blend, no active ingredient</td><td>Same capsule size and colour as each active product</td><td>Clinical trials run by the company&rsquo;s clients.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note"><span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a> <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000119312526271863/d157521d6k.htm" target="_blank" rel="noopener">6-K, Jun 16</a></p>
+  </div>
+</section>
+
+<!-- ============ 06 ACCESS (tint): the regulatory map replaces a market-size figure; how supply works; revenue by geography; the two planned trials ============ -->
+<section id="access" class="access sec-tint" aria-labelledby="access-h">
+  <div class="wrap">
+    <header class="dochead"><span class="no" aria-hidden="true">04</span><span class="lab">Access and programmes</span><span class="meta">Where supply is lawful, and what is planned</span></header>
+    <h2 id="access-h">Where the products can be supplied, and what is planned.</h2>
+    <p class="lead access-lead">The filings give no sourced market-size figure. The one patient-population figure in them is the company&rsquo;s own, from its September 10 release: major depressive disorder is &ldquo;among the most common mental health conditions worldwide, affecting an estimated 332 million people, according to the World Health Organization.&rdquo; <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326005973/f6k_091026.htm" target="_blank" rel="noopener">6-K, Sep 10</a> This section sets out where the prospectus says the products can lawfully be supplied, where they are used in trials, and where the company says it cannot sell.</p>
+
+    <div class="routes">
+      <article class="route reveal" style="--d:.04s">
+        <span class="route-no" aria-hidden="true">A</span>
+        <h3>Australia</h3>
+        <p>The company&rsquo;s products are available there &ldquo;where psilocybin and MDMA have been rescheduled to allow prescription by an Authorized Prescriber only for TRD and PTSD.&rdquo; It launched natural psilocybin capsules there and made an initial shipment of 1,000 capsules in September 2025. <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a></p>
+        <p>Supply runs through a five-year agreement signed February 28, 2023 with KMT Pharmaceuticals Pty Ltd, with Mind Medicine acting as guarantor. The company agreed not to supply MDMA or psilocybin products to any other party in Australia, other than for clinical trials; either party can end that exclusivity on nine months&rsquo; written notice, and &ldquo;There are no minimum purchase requirements under the Supply Agreement.&rdquo; <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a></p>
+        <p>Its June 29, 2026 release calls the latest 1,000-capsule export its third commercial shipment of the 5 mg psilocybin capsules, and its October 20 release plans the next MDMA export before the end of 2026. <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000119312526286955/d145470d6k.htm" target="_blank" rel="noopener">6-K, Jun 29</a> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326006705/f6k_102026.htm" target="_blank" rel="noopener">6-K, Oct 20</a></p>
+      </article>
+      <article class="route reveal" style="--d:.1s">
+        <span class="route-no" aria-hidden="true">B</span>
+        <h3>Canada</h3>
+        <p>Products are available through the Special Access Program. &ldquo;The SAP patient authorization process has been successfully achieved for MDMA products.&rdquo; The business overview says the psilocybin product is &ldquo;currently in phase 2b clinical trials in Canada conducted by third parties.&rdquo; Another passage, on a supply agreement with ATMA CENA Healthcare Solutions, says: &ldquo;We are awaiting confirmation from ATMA CENA Healthcare Solutions regarding next steps under the agreement and expect to supply psilocybin extract in connection with their planned clinical trial.&rdquo; <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a></p>
+      </article>
+      <article class="route reveal" style="--d:.16s">
+        <span class="route-no" aria-hidden="true">C</span>
+        <h3>Trials elsewhere</h3>
+        <p>&ldquo;In all other countries, access is restricted to approved clinical trials,&rdquo; including Israel, where the prospectus says the MDMA product is in phase 2 trials conducted by third parties. <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a> A June 10, 2026 release reports the first psilocybin export to the United Kingdom for a Phase 2 trial. <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000119312526265161/d126955d6k.htm" target="_blank" rel="noopener">6-K, Jun 10</a></p>
+      </article>
+      <article class="route route-closed reveal" style="--d:.22s">
+        <span class="route-no" aria-hidden="true">D</span>
+        <h3>United States</h3>
+        <p>&ldquo;We are currently restricted from selling our products in the United States,&rdquo; where, the prospectus says, psilocybin and MDMA are considered Schedule I &ldquo;controlled&rdquo; or &ldquo;scheduled&rdquo; substances. <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a></p>
+      </article>
+    </div>
+
+    <div class="how reveal">
+      <h3 class="mlabel">How supply to Australia works, in the company&rsquo;s own account</h3>
+      <ol class="steps">
+        <li><b>Made in Princeton.</b> The capsules are manufactured at the company&rsquo;s GMP facility under its Health Canada Drug Establishment Licence. <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326006705/f6k_102026.htm" target="_blank" rel="noopener">6-K, Oct 20</a></li>
+        <li><b>Permits.</b> The company reports receiving a TGA import permit and a Health Canada export permit for 1,000 capsules of 5 mg psilocybin in May 2025. <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a></li>
+        <li><b>Shipped.</b> The company says its product is &ldquo;shipped to pharmacy partners globally&rdquo; and supplies clinics and pharmacies in Australia through Optimi Australia. <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000119312526286955/d145470d6k.htm" target="_blank" rel="noopener">6-K, Jun 29</a> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326006705/f6k_102026.htm" target="_blank" rel="noopener">6-K, Oct 20</a></li>
+        <li><b>Prescribed.</b> Authorized Prescribers may prescribe psilocybin for treatment-resistant depression and MDMA for PTSD. <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a></li>
+      </ol>
+    </div>
+
+    <figure class="geo reveal" aria-labelledby="geo-t">
+      <h3 id="geo-t" class="mlabel">Figure 3. Where revenue came from, share of each period&rsquo;s total</h3>
+      <div class="geo-key" aria-hidden="true"><span class="k k-can">Canada</span><span class="k k-anz">Australia and New Zealand</span><span class="k k-uk">United Kingdom</span><span class="k k-oth">Israel and United States</span></div>
+      <div class="geo-row">
+        <span class="geo-label">Year ended Sep 30, 2024</span>
+        <div class="geo-bar" role="img" aria-label="Canada 96.9 percent, Australia and New Zealand 0.7 percent, Israel 1.2 percent, United States 1.2 percent"><span class="seg seg-can" style="--w:96.9"><b>96.9%</b></span><span class="seg seg-anz" style="--w:0.7"></span><span class="seg seg-oth" style="--w:2.4"></span></div>
+        <span class="geo-total">C$389,850</span>
+      </div>
+      <div class="geo-row">
+        <span class="geo-label">Year ended Sep 30, 2025</span>
+        <div class="geo-bar" role="img" aria-label="Canada 47.3 percent, Australia and New Zealand 51.5 percent, Israel 0.9 percent, United States 0.3 percent"><span class="seg seg-can" style="--w:47.3"><b>47.3%</b></span><span class="seg seg-anz" style="--w:51.5"><b>51.5%</b></span><span class="seg seg-oth" style="--w:1.2"></span></div>
+        <span class="geo-total">C$426,301</span>
+      </div>
+      <div class="geo-row">
+        <span class="geo-label">Nine months ended Jun 30, 2025</span>
+        <div class="geo-bar" role="img" aria-label="Canada 43 percent, Australia and New Zealand 57 percent, and a small United States amount"><span class="seg seg-can" style="--w:43"><b>43%</b></span><span class="seg seg-anz" style="--w:57"><b>57%</b></span></div>
+        <span class="geo-total">C$490,330</span>
+      </div>
+      <div class="geo-row">
+        <span class="geo-label">Nine months ended Jun 30, 2026</span>
+        <div class="geo-bar" role="img" aria-label="Australia and New Zealand 56.7 percent, United Kingdom 43.3 percent, computed from the amounts"><span class="seg seg-anz" style="--w:56.7"><b>56.7%</b></span><span class="seg seg-uk" style="--w:43.3"><b>43.3%</b></span></div>
+        <span class="geo-total">C$239,700</span>
+      </div>
+      <figcaption>Percentages are as filed in the 424B3 revenue table, except the latest nine months. There the filing prints 62.2% and 37.8% beside C$136,000 and C$103,700, which do not match its own amounts, so that bar is drawn from the amounts (56.7% and 43.3% of C$239,700). <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a> <span class="tg tg-cm">Computed</span> The two small slivers for Israel and the United States are the filed amounts added together. Canadian dollars.</figcaption>
+    </figure>
+
+    <div class="table-scroll reveal">
+      <table class="fin geo-table">
+        <caption>Revenue by geography, Canadian dollars, as filed in the 424B3</caption>
+        <thead><tr><th scope="col">Region</th><th scope="col" class="num">Nine months to Jun 30, 2026</th><th scope="col" class="num">Nine months to Jun 30, 2025</th><th scope="col" class="num">Year to Sep 30, 2025</th><th scope="col" class="num">Year to Sep 30, 2024</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Canada</th><td class="num">nil</td><td class="num">208,807</td><td class="num">201,483</td><td class="num">377,602</td></tr>
+          <tr><th scope="row">Australia and New Zealand</th><td class="num">136,000</td><td class="num">280,253</td><td class="num">219,753</td><td class="num">2,750</td></tr>
+          <tr><th scope="row">United Kingdom</th><td class="num">103,700</td><td class="num">nil</td><td class="num">nil</td><td class="num">nil</td></tr>
+          <tr><th scope="row">Israel</th><td class="num">nil</td><td class="num">nil</td><td class="num">3,795</td><td class="num">4,526</td></tr>
+          <tr><th scope="row">United States</th><td class="num">nil</td><td class="num">1,270</td><td class="num">1,270</td><td class="num">4,972</td></tr>
+          <tr class="focal"><th scope="row">Total</th><td class="num">239,700</td><td class="num">490,330</td><td class="num">426,301</td><td class="num">389,850</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="mlabel progs-label">Two trials the company has announced, both planned for 2027</h3>
+    <div class="progs">
+      <article class="prog reveal" style="--d:.04s">
+        <span class="prog-ph">Phase 2</span>
+        <h3>Psilocybin for major depressive disorder</h3>
+        <dl class="prog-dl">
+          <div><dt>Status</dt><dd>Health Canada-authorized; planned to be initiated in the first half of 2027</dd></div>
+          <div><dt>Size</dt><dd>Up to 200 participants at sites across Canada, one supervised dose of natural psilocybin</dd></div>
+          <div><dt>Dosing</dt><dd>Expected to be complete by the end of 2027</dd></div>
+          <div><dt>Primary endpoint</dt><dd>Change in the MADRS total score from baseline</dd></div>
+        </dl>
+        <p><span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326005973/f6k_091026.htm" target="_blank" rel="noopener">6-K, Sep 10</a></p>
+      </article>
+      <article class="prog reveal" style="--d:.1s">
+        <span class="prog-ph">Phase 3</span>
+        <h3>MDMA for post-traumatic stress disorder</h3>
+        <dl class="prog-dl">
+          <div><dt>Status</dt><dd>Health Canada-authorized; expected to begin in 2027</dd></div>
+          <div><dt>Size</dt><dd>Up to 100 veterans and current or former frontline workers, two supervised sessions</dd></div>
+          <div><dt>Supply</dt><dd>The company&rsquo;s October 20, 2026 release says its latest MDMA batch is expected to supply this trial</dd></div>
+          <div><dt>Primary endpoint</dt><dd>Change in the CAPS-5 score</dd></div>
+        </dl>
+        <p><span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326006065/f6k_091626.htm" target="_blank" rel="noopener">6-K, Sep 16</a> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326006705/f6k_102026.htm" target="_blank" rel="noopener">6-K, Oct 20</a></p>
+      </article>
+    </div>
+    <p class="note">These are plans in company press releases, which report no results from either trial. The releases also say that the safety and efficacy of the therapies are &ldquo;still under investigation&rdquo; and that none of the company&rsquo;s MDMA or psilocybin drug products has market authorization from Health Canada. <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326005973/f6k_091026.htm" target="_blank" rel="noopener">6-K, Sep 10</a> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326006065/f6k_091626.htm" target="_blank" rel="noopener">6-K, Sep 16</a></p>
+  </div>
+</section>
+
+<!-- ============ 07 FINANCIALS (white): every line from the filed statements, in Canadian dollars; the cost-of-sales mix shows what changed ============ -->
+<section id="financials" class="financials sec-white" aria-labelledby="fin-h">
+  <div class="wrap">
+    <header class="dochead"><span class="no" aria-hidden="true">05</span><span class="lab">Financial statements</span><span class="meta">Canadian dollars &middot; IFRS &middot; year ends September 30</span></header>
+    <h2 id="fin-h">Financial statements.</h2>
+    <p class="lead fin-lead">Every figure is in Canadian dollars under IFRS Accounting Standards as issued by the IASB, as filed. The prospectus adds a US dollar convenience column for the latest period only; this page does not use it. The audited years are to September 30, 2025 and 2024; the nine-month statements are unaudited. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a></p>
+
+    <div class="fin-pair">
+      <div class="table-scroll reveal">
+        <table class="fin stmt">
+          <caption>Statement of loss, nine months ended June 30 (unaudited)</caption>
+          <thead><tr><th scope="col">C$</th><th scope="col" class="num">2026</th><th scope="col" class="num">2025</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Revenue</th><td class="num">239,700</td><td class="num">490,330</td></tr>
+            <tr><th scope="row">Cost of sales</th><td class="num nsp">(83,613)</td><td class="num nsp">(94,227)</td></tr>
+            <tr><th scope="row">Gross margin</th><td class="num">156,087</td><td class="num">396,103</td></tr>
+            <tr><th scope="row">Expenses</th><td class="num nsp">(5,715,536)</td><td class="num nsp">(3,670,347)</td></tr>
+            <tr class="sub"><th scope="row">of which investor relations</th><td class="num">1,166,558</td><td class="num">136,430</td></tr>
+            <tr class="sub"><th scope="row">of which consulting</th><td class="num">940,620</td><td class="num">614,887</td></tr>
+            <tr class="sub"><th scope="row">of which bank charges and interest</th><td class="num">787,245</td><td class="num">329,192</td></tr>
+            <tr class="sub"><th scope="row">of which wages and benefits</th><td class="num">753,267</td><td class="num">858,934</td></tr>
+            <tr class="sub"><th scope="row">of which amortization and depreciation</th><td class="num">721,386</td><td class="num">679,622</td></tr>
+            <tr><th scope="row">Interest and other income</th><td class="num">7,358</td><td class="num">7,629</td></tr>
+            <tr><th scope="row">Debt forgiveness</th><td class="num">nil</td><td class="num">903,951</td></tr>
+            <tr class="focal"><th scope="row">Loss and comprehensive loss</th><td class="num nsp">(5,552,091)</td><td class="num nsp">(2,362,664)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-scroll reveal" style="--d:.08s">
+        <table class="fin stmt">
+          <caption>Statement of loss, years ended September 30 (audited)</caption>
+          <thead><tr><th scope="col">C$</th><th scope="col" class="num">2025</th><th scope="col" class="num">2024</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Revenue</th><td class="num">426,301</td><td class="num">389,850</td></tr>
+            <tr><th scope="row">Cost of sales</th><td class="num nsp">(410,716)</td><td class="num nsp">(238,388)</td></tr>
+            <tr><th scope="row">Gross margin before fair value adjustment</th><td class="num">15,585</td><td class="num">151,462</td></tr>
+            <tr><th scope="row">Fair value adjustment, biological assets and inventory</th><td class="num nsp">(83,715)</td><td class="num">119,448</td></tr>
+            <tr><th scope="row">Gross margin</th><td class="num nsp">(68,130)</td><td class="num">270,910</td></tr>
+            <tr><th scope="row">Expenses</th><td class="num nsp">(5,075,829)</td><td class="num nsp">(6,309,434)</td></tr>
+            <tr><th scope="row">Interest and other income</th><td class="num">14,313</td><td class="num">2,665</td></tr>
+            <tr><th scope="row">Debt forgiveness</th><td class="num">1,417,615</td><td class="num">nil</td></tr>
+            <tr class="focal"><th scope="row">Loss and comprehensive loss</th><td class="num nsp">(3,712,031)</td><td class="num nsp">(6,035,859)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="fin-pair">
+      <div class="table-scroll reveal">
+        <table class="fin stmt">
+          <caption>Statement of financial position</caption>
+          <thead><tr><th scope="col">C$</th><th scope="col" class="num">Jun 30, 2026</th><th scope="col" class="num">Sep 30, 2025</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Cash</th><td class="num">13,073,333</td><td class="num">1,145,065</td></tr>
+            <tr><th scope="row">Total current assets</th><td class="num">13,967,209</td><td class="num">1,826,227</td></tr>
+            <tr><th scope="row">Plant and equipment</th><td class="num">11,724,202</td><td class="num">12,380,190</td></tr>
+            <tr><th scope="row">Total assets</th><td class="num">25,861,164</td><td class="num">15,212,645</td></tr>
+            <tr><th scope="row">Total current liabilities</th><td class="num">8,087,930</td><td class="num">8,483,610</td></tr>
+            <tr class="sub"><th scope="row">of which loans payable</th><td class="num">1,979,000</td><td class="num">2,884,500</td></tr>
+            <tr class="sub"><th scope="row">of which convertible debentures</th><td class="num">3,000,000</td><td class="num">3,450,000</td></tr>
+            <tr class="sub"><th scope="row">of which due to related parties</th><td class="num">1,584,178</td><td class="num">524,326</td></tr>
+            <tr><th scope="row">Total liabilities</th><td class="num">8,223,125</td><td class="num">8,641,984</td></tr>
+            <tr><th scope="row">Accumulated deficit</th><td class="num nsp">(31,360,001)</td><td class="num nsp">(27,241,680)</td></tr>
+            <tr class="focal"><th scope="row">Total equity</th><td class="num">17,638,039</td><td class="num">6,570,661</td></tr>
+            <tr><th scope="row">Working capital <span class="tg tg-cm">Computed</span></th><td class="num">5,879,279</td><td class="num nsp">(6,657,383)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-scroll reveal" style="--d:.08s">
+        <table class="fin stmt">
+          <caption>Cash flows</caption>
+          <thead><tr><th scope="col">C$</th><th scope="col" class="num">Nine months to Jun 30, 2026</th><th scope="col" class="num">Nine months to Jun 30, 2025</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Operating activities</th><td class="num nsp">(3,822,124)</td><td class="num nsp">(1,249,866)</td></tr>
+            <tr><th scope="row">Investing activities</th><td class="num nsp">(36,859)</td><td class="num nsp">(15,551)</td></tr>
+            <tr><th scope="row">Financing activities</th><td class="num">15,787,251</td><td class="num">1,250,290</td></tr>
+            <tr class="sub"><th scope="row">of which offering gross proceeds</th><td class="num">20,700,000</td><td class="num">nil</td></tr>
+            <tr class="sub"><th scope="row">of which offering issue costs</th><td class="num nsp">(3,874,049)</td><td class="num">nil</td></tr>
+            <tr class="sub"><th scope="row">of which loan repayment</th><td class="num nsp">(1,000,000)</td><td class="num">nil</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p class="note"><span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326005554/f6k_081426.htm" target="_blank" rel="noopener">6-K, Aug 14</a> <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a> The 6-K carries the nine-month statements; the 424B3 carries the audited years and the geography and cost-of-sales tables. The MD&amp;A text calls C$5,715,536 a &ldquo;net loss&rdquo;; that figure is the statement&rsquo;s total expenses, and the statement of loss prints C$5,552,091, which this page uses.</p>
+
+    <h3 class="mlabel mix-label">What is inside the revenue and the cost of sales: the product mix changed</h3>
+    <div class="table-scroll reveal">
+      <table class="fin mix">
+        <caption>Revenue by nature, Canadian dollars with the filed share of each period&rsquo;s total</caption>
+        <thead><tr><th scope="col">C$</th><th scope="col" class="num">Nine months to Jun 30, 2026</th><th scope="col" class="num">Nine months to Jun 30, 2025</th><th scope="col" class="num">Year to Sep 30, 2025</th><th scope="col" class="num">Year to Sep 30, 2024</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Drug products and licensing</th><td class="num nsp">239,700 (100%)</td><td class="num nsp">359,753 (73%)</td><td class="num nsp">303,048 (71.1%)</td><td class="num nsp">11,026 (2.8%)</td></tr>
+          <tr><th scope="row">Nutraceutical products</th><td class="num">nil</td><td class="num nsp">130,577 (27%)</td><td class="num nsp">123,253 (28.9%)</td><td class="num nsp">378,824 (97.2%)</td></tr>
+          <tr class="focal"><th scope="row">Total revenue</th><td class="num">239,700</td><td class="num">490,330</td><td class="num">426,301</td><td class="num">389,850</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note"><span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a> The 424B3 prints the nine-month 2026 total in this table as 237,700; its line items and the statement of loss give 239,700. The company says &ldquo;We are in the process of permanently winding down the business segment that was responsible for the sale of nutraceutical products.&rdquo;</p>
+    <div class="table-scroll reveal">
+      <table class="fin mix">
+        <caption>Cost of sales by nature, Canadian dollars with the filed share of each period&rsquo;s total</caption>
+        <thead><tr><th scope="col">C$</th><th scope="col" class="num">Nine months to Jun 30, 2026</th><th scope="col" class="num">Nine months to Jun 30, 2025</th><th scope="col" class="num">Year to Sep 30, 2025</th><th scope="col" class="num">Year to Sep 30, 2024</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Finished-goods drug products</th><td class="num nsp">83,613 (100%)</td><td class="num nsp">24,318 (26%)</td><td class="num nsp">77,390 (18.8%)</td><td class="num nsp">4,986 (2.1%)</td></tr>
+          <tr><th scope="row">Finished-goods nutraceutical products</th><td class="num">nil</td><td class="num nsp">65,741 (70%)</td><td class="num nsp">102,838 (25.0%)</td><td class="num nsp">226,426 (95.0%)</td></tr>
+          <tr><th scope="row">Impairment of inventory</th><td class="num">nil</td><td class="num">nil</td><td class="num nsp">225,900 (55.0%)</td><td class="num">nil</td></tr>
+          <tr><th scope="row">Other</th><td class="num">nil</td><td class="num">4,168</td><td class="num">4,588</td><td class="num">6,976</td></tr>
+          <tr class="focal"><th scope="row">Total cost of sales</th><td class="num">83,613</td><td class="num">94,227</td><td class="num">410,716</td><td class="num">238,388</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note"><span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a> The year to September 30, 2025 cost of sales includes a C$225,900 provision against mushroom biomass inventory that the prospectus says was taken &ldquo;due to the aging of the inventory.&rdquo; Because the tables split revenue by nature, the drug products and licensing line is the like-for-like series across these periods.</p>
+  </div>
+</section>
+
+<!-- ============ 08 FUNDING (gravest band: darkest stock, its own treatment): offering, equity line, debt, holders ============ -->
+<section id="funding" class="funding sec-dark sec-grave" aria-labelledby="fund-h">
+  <div class="wrap">
+    <header class="dochead"><span class="no" aria-hidden="true">06</span><span class="lab">Funding, debt and ownership</span><span class="meta">Prospectus of August 27, 2026, updated where noted</span></header>
+    <h2 id="fund-h">How the company has been funded, and what it owes.</h2>
+
+    <div class="fund-grid">
+      <div class="fund-col">
+      <article class="fund-card reveal">
+        <span class="eyebrow">May 2026 offering</span>
+        <h3>2,400,000 shares at US$6.25</h3>
+        <dl class="fund-dl">
+          <div><dt>Gross proceeds</dt><dd>US$15,000,000; C$20,700,000 in the nine-month statements</dd></div>
+          <div><dt>Underwriting discounts</dt><dd>US$1,125,000</dd></div>
+          <div><dt>Issue costs, nine-month statements</dt><dd>C$3,874,049</dd></div>
+          <div><dt>Reverse share split</dt><dd>1-for-30, effective May 19, 2026</dd></div>
+        </dl>
+        <p class="fund-src"><span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000119312526231760/d43258d424b4.htm" target="_blank" rel="noopener">424B4, May 20</a> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326005554/f6k_081426.htm" target="_blank" rel="noopener">6-K, Aug 14</a></p>
+      </article>
+      <article class="fund-card reveal">
+        <span class="eyebrow">Debt, at Jun 30, 2026</span>
+        <h3>Loans, debentures and related-party balances</h3>
+        <dl class="fund-dl">
+          <div><dt>Loans payable</dt><dd>C$1,979,000 carried, C$2,000,000 owed, 7.5% and secured against the company&rsquo;s assets; C$1,000,000 was repaid in the nine months and the notes say a further C$1,000,000 was repaid after June 30, 2026. The notes show C$1,000,000 maturing August 4, 2026 and C$1,000,000 on August 31, 2026. The prospectus also lists a C$1,000,000 secured loan at 7.5% from Catcher Investments Ltd., made August 4, 2023, with 3,333 warrants at C$15.00.</dd></div>
+          <div><dt>Convertible debentures</dt><dd>C$3,000,000, 15%, convertible at C$4.50 into 666,667 shares; stated maturity July 24, 2026, unless extended by the holders for a further twelve months</dd></div>
+          <div><dt>Who holds the debentures</dt><dd>When they were issued on July 24, 2025, Catcher Investments Ltd. (controlled by John James Wilson) took 3,000 and Cathay Visions Enterprises Ltd. (controlled by Dane Stevens) took 450. On June 29, 2026 Cathay Visions converted its 450 into 100,000 common shares, issued as it directed. The 3,000 still listed are Catcher&rsquo;s.</dd></div>
+          <div><dt>Due to related parties</dt><dd>C$1,584,178, against C$524,326 at Sep 30, 2025; the MD&amp;A says it includes C$470,692 of accrued interest on the debentures, although the prospectus says the 15% interest is payable quarterly in cash</dd></div>
+        </dl>
+        <p class="fund-src"><span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326005554/f6k_081426.htm" target="_blank" rel="noopener">6-K, Aug 14</a> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a></p>
+      </article>
+      </div>
+      <div class="fund-col">
+      <article class="fund-card reveal" style="--d:.08s">
+        <span class="eyebrow">Equity line, August 13, 2026</span>
+        <h3>Up to US$100 million, at the company&rsquo;s option</h3>
+        <dl class="fund-dl">
+          <div><dt>Counterparty</dt><dd>Seven Knots, LLC</dd></div>
+          <div><dt>Price</dt><dd>97% of the lesser of the lowest sale price on the purchase date and the VWAP over the purchase period</dd></div>
+          <div><dt>Size of a draw</dt><dd>Not more than US$2 million, and not more than 30% of trading volume in the period</dd></div>
+          <div><dt>Ownership cap</dt><dd>Seven Knots may not hold more than 4.99% of the shares</dd></div>
+          <div><dt>Commitment notes</dt><dd>US$1.5 million issued; a further US$500,000 once gross proceeds reach US$7 million. Unsecured, non-interest-bearing and due 24 months after issue; convertible at 95% of the 20-day average VWAP, with a US$3.00 floor and a 2.99% ownership cap</dd></div>
+          <div><dt>Placement agent</dt><dd>Joseph Gunnar &amp; Co., LLC, at 3% of gross proceeds from Seven Knots</dd></div>
+        </dl>
+        <p class="fund-src"><span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026090286/ea0302258-6k_optimi.htm" target="_blank" rel="noopener">6-K, Aug 14, equity line</a></p>
+      </article>
+      <article class="fund-card reveal" style="--d:.08s">
+        <span class="eyebrow">Directors&rsquo; compensation</span>
+        <h3>Forgiven and accrued</h3>
+        <p class="fund-p">&ldquo;During the fiscal year ended September 30, 2025, our directors forgave an aggregate of C$1,331,052 in compensation earned by them but not yet paid for their services as directors or officers.&rdquo; The statements show C$1,417,615 of debt forgiveness in that year and C$903,951 in the nine months to Jun 30, 2025. <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a> The management circular of July 28, 2026 dates the agreements of Catcher Investments Ltd. and Cathay Visions Enterprises Ltd. two ways: January 20, 2025 (C$321,300.00 and C$195,787.50) and January 28, 2026 (C$129,937.50 and C$62,807.02, for compensation accrued from January to September 2025). <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026082397/ea0299421-6k_optimi.htm" target="_blank" rel="noopener">6-K, Jul 28</a></p>
+      </article>
+      </div>
+    </div>
+
+    <blockquote class="cq cq-dark">The prospectus warns that &ldquo;the actual gross proceeds from the sale by us to Seven Knots of all the common shares being registered for resale hereunder may be substantially less than the $100 million total purchase commitment available to us under the Purchase Agreement, which could materially adversely affect our liquidity.&rdquo; <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a></blockquote>
+
+    <figure class="dil reveal" aria-labelledby="dil-t" style="--tot:27669127">
+      <h3 id="dil-t" class="mlabel">Figure 4. Shares outstanding, and shares registered for resale by Seven Knots</h3>
+      <div class="dil-row">
+        <span class="dil-label">Outstanding at the prospectus date</span>
+        <div class="dil-bar" role="img" aria-label="5,725,867 shares outstanding"><span class="dseg dseg-now" style="--w:5725867"><b>5,725,867</b></span></div>
+      </div>
+      <div class="dil-row">
+        <span class="dil-label">After the offering, as the prospectus states it</span>
+        <div class="dil-bar" role="img" aria-label="27,669,127 shares after the offering: 5,725,867 outstanding plus up to 21,943,260 registered for resale"><span class="dseg dseg-now" style="--w:5725867"></span><span class="dseg dseg-new" style="--w:21943260"><b>21,943,260 registered for resale</b></span><span class="dil-total">27,669,127</span></div>
+      </div>
+      <figcaption>Of the 21,943,260 registered shares, 21,276,593 are shares the company may sell under the purchase agreement, at an assumed price of US$4.68 (the August 11, 2026 Nasdaq close), and 666,667 would come from converting the commitment notes at the US$3.00 floor. The registered shares are 3.8 times the shares outstanding. <span class="tg tg-cm">Computed</span> The prospectus&rsquo;s 27,669,127 total excludes 171,222 shares issuable on outstanding warrants, 98,665 on options, 13,875 on restricted share rights, 746,340 reserved for future awards and 666,667 issuable on conversion of the debentures. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a></figcaption>
+    </figure>
+
+    <div class="table-scroll holders reveal">
+      <table class="fin hold">
+        <caption>Who holds more than 5%, and the directors and officers as a group</caption>
+        <thead><tr><th scope="col">Holder</th><th scope="col" class="num">Shares</th><th scope="col" class="num">Share of class</th><th scope="col">Source</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Dane Stevens, through Cathay Visions Enterprises Ltd.</th><td class="num">474,124</td><td class="num">8.3%</td><td><span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a></td></tr>
+          <tr><th scope="row">Edward and Diana Safarik</th><td class="num">326,133</td><td class="num">5.7%</td><td><span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a></td></tr>
+          <tr><th scope="row">All directors and executive officers as a group</th><td class="num">993,052</td><td class="num">17.2%</td><td><span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a></td></tr>
+          <tr><th scope="row">YA II PN, Ltd., in the prospectus</th><td class="num">400,000</td><td class="num">7.0%</td><td><span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">424B3, Aug 27</a></td></tr>
+          <tr class="focal"><th scope="row">YA II PN, Ltd., in the Schedule 13G/A filed Oct 5, 2026</th><td class="num">173,000</td><td class="num">3.0%</td><td><span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000110465926113723/0001104659-26-113723-index.htm" target="_blank" rel="noopener">13G/A, Oct 5</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note note-dark">Percentages in the prospectus are of the 5,725,867 shares outstanding at its date. The 13G/A gives an event date of September 30, 2026 and checks the box for ownership of 5% or less. John James Wilson&rsquo;s 287,639 shares (5.0%) are listed with the directors in the prospectus. The prospectus counts the 100,000 shares held by BC Green Pharmaceuticals Inc. in both Jacob Safarik&rsquo;s and Bryan Safarik&rsquo;s rows (each disclaims beneficial ownership beyond his pecuniary interest), and the group total of 993,052 equals the sum of the five director rows. <span class="tg tg-cm">Computed</span></p>
+  </div>
+</section>
+
+<!-- ============ 09 FILINGS (tint): every filing since the May 2026 offering, newest first, headlines as filed ============ -->
+<section id="filings" class="filings sec-tint" aria-labelledby="filings-h">
+  <div class="wrap">
+    <header class="dochead"><span class="no" aria-hidden="true">07</span><span class="lab">Filings and releases</span><span class="meta">Forms 6-K, two prospectuses and one Schedule 13G/A &middot; newest first</span></header>
+    <h2 id="filings-h">Filings and press releases.</h2>
+    <p class="lead fil-lead">The company is a foreign private issuer, so its press releases arrive as Forms 6-K. Each link opens the filing on EDGAR. Press-release rows carry the headline as filed; the prospectus, report and Schedule 13G/A rows are described in plain words. The list is not every EDGAR filing: the Form F-1, the Form S-8, the Form 8-A12B and other Schedules 13G are not shown. <a class="inl" href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0002027329&amp;type=&amp;dateb=&amp;owner=include&amp;count=40" target="_blank" rel="noopener">All filings on EDGAR</a></p>
+    <div class="news">
+      <section class="news-year" aria-label="2026 filings">
+        <h3 class="news-yr">2026</h3>
+        <ul class="news-list">
+          <li class="news-item"><time datetime="2026-10-20">Oct 20, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326006705/f6k_102026.htm" target="_blank" rel="noopener">Optimi Health Completes MDMA Production for Phase 3 PTSD Trial in Canada, MAPS Trial in Israel and Commercial Supply in Australia<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">6-K</span></li>
+          <li class="news-item"><time datetime="2026-10-07">Oct 7, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326006484/f6k_100726.htm" target="_blank" rel="noopener">Optimi Health to Present at the ThinkEquity Conference<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">6-K</span></li>
+          <li class="news-item"><time datetime="2026-10-05">Oct 5, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/2027329/000110465926113723/0001104659-26-113723-index.htm" target="_blank" rel="noopener">Schedule 13G/A filed by YA II PN, Ltd.<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">13G/A</span></li>
+          <li class="news-item"><time datetime="2026-09-29">Sep 29, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326006275/f6k_092826.htm" target="_blank" rel="noopener">Form 51-102F3 Material Change Report, for September 29, 2026<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">6-K</span></li>
+          <li class="news-item"><time datetime="2026-09-23">Sep 23, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326006184/f6k_092326.htm" target="_blank" rel="noopener">Optimi Health Completes Psilocybin Production for Health Canada-Approved Phase 2 MDD Trial and Commercial TRD Supply<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">6-K</span></li>
+          <li class="news-item"><time datetime="2026-09-22">Sep 22, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326006164/f6k_092226.htm" target="_blank" rel="noopener">Optimi Health Appoints Dr. Michael Blough as Chief Clinical Development Officer<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">6-K</span></li>
+          <li class="news-item"><time datetime="2026-09-16">Sep 16, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326006065/f6k_091626.htm" target="_blank" rel="noopener">Optimi Health Expands Clinical Program with Phase 3 Trial Evaluating MDMA-Assisted Therapy for Post-Traumatic Stress Disorder<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">6-K</span></li>
+          <li class="news-item"><time datetime="2026-09-10">Sep 10, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326005973/f6k_091026.htm" target="_blank" rel="noopener">Optimi Health to Initiate Phase 2 Clinical Trial Evaluating Psilocybin-Assisted Therapy for Major Depressive Disorder<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">6-K</span></li>
+          <li class="news-item"><time datetime="2026-09-08">Sep 8, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326005914/f6k_090426.htm" target="_blank" rel="noopener">Optimi Health to Participate in the H.C. Wainwright 28th Annual Global Investment Conference<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">6-K</span></li>
+          <li class="news-item"><time datetime="2026-08-27">Aug 27, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">Prospectus for the resale of common shares by Seven Knots, LLC<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">424B3</span></li>
+          <li class="news-item"><time datetime="2026-08-27">Aug 27, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326005754/f6k_082626.htm" target="_blank" rel="noopener">Form 51-102F3 Material Change Report, for August 14, 2026<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">6-K</span></li>
+          <li class="news-item"><time datetime="2026-08-14">Aug 14, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326005554/f6k_081426.htm" target="_blank" rel="noopener">Management&rsquo;s discussion and analysis and interim financial statements, nine months ended June 30, 2026<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">6-K</span></li>
+          <li class="news-item"><time datetime="2026-08-14">Aug 14, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026090286/ea0302258-6k_optimi.htm" target="_blank" rel="noopener">Optimi Health Establishes Discretionary Equity Facility<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">6-K</span></li>
+          <li class="news-item"><time datetime="2026-08-07">Aug 7, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326005350/f6k_080726.htm" target="_blank" rel="noopener">Report of open market purchase of 3,800 common shares by Dane Stevens<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">6-K</span></li>
+          <li class="news-item"><time datetime="2026-07-28">Jul 28, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026082397/ea0299421-6k_optimi.htm" target="_blank" rel="noopener">Notice of Annual General and Special Meeting and Management Information Circular, for the meeting to be held August 13, 2026<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">6-K</span></li>
+          <li class="news-item"><time datetime="2026-07-20">Jul 20, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326004760/f6k_072026.htm" target="_blank" rel="noopener">Report of open market purchases of 18,700 common shares by Dane Stevens<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">6-K</span></li>
+          <li class="news-item"><time datetime="2026-06-29">Jun 29, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/2027329/000119312526286955/d145470d6k.htm" target="_blank" rel="noopener">Optimi Health Completes Psilocybin Export to Australia for Patients With Treatment-Resistant Depression<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">6-K</span></li>
+          <li class="news-item"><time datetime="2026-06-16">Jun 16, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/2027329/000119312526271863/d157521d6k.htm" target="_blank" rel="noopener">Optimi Health Launches Standardized Microdose Psilocybin Products for Clinical Research<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">6-K</span></li>
+          <li class="news-item"><time datetime="2026-06-10">Jun 10, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/2027329/000119312526265161/d126955d6k.htm" target="_blank" rel="noopener">Optimi Health Completes First Export of Psilocybin to the United Kingdom for Phase 2 Clinical Trial<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">6-K</span></li>
+          <li class="news-item"><time datetime="2026-06-08">Jun 8, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/2027329/000119312526260708/d160428d6k.htm" target="_blank" rel="noopener">Optimi Health Secures Ibogaine Supply and Commences Finished Drug Product Development<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">6-K</span></li>
+          <li class="news-item"><time datetime="2026-06-02">Jun 2, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/2027329/000119312526252513/d113735d6k.htm" target="_blank" rel="noopener">Optimi Health Completes Commercial Psilocybin Production to Address Treatment-Resistant Depression in Australia<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">6-K</span></li>
+          <li class="news-item"><time datetime="2026-06-02">Jun 2, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/2027329/000119312526251855/d119379d6k.htm" target="_blank" rel="noopener">Management&rsquo;s discussion and analysis and interim financial statements, six months ended March 31, 2026<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">6-K</span></li>
+          <li class="news-item"><time datetime="2026-05-29">May 29, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/2027329/000119312526247169/d102564d6k.htm" target="_blank" rel="noopener">Optimi Health Welcomes Expanded Psychedelic-Assisted Therapy Access Under Updated Authorized Prescriber Framework in Australia<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">6-K</span></li>
+          <li class="news-item"><time datetime="2026-05-26">May 26, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/2027329/000119312526237833/d35078d6k.htm" target="_blank" rel="noopener">Optimi Health Advances Highest-Purity Natural Psilocybin Extract to Date<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">6-K</span></li>
+          <li class="news-item"><time datetime="2026-05-20">May 20, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/2027329/000119312526231760/d43258d424b4.htm" target="_blank" rel="noopener">Prospectus for the initial public offering of 2,400,000 common shares<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">424B4</span></li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10 CONTACT IR (white): the official site and address only; no form that posts nowhere, no invented agent ============ -->
+<section id="contact" class="contact sec-white" aria-labelledby="contact-h">
+  <div class="wrap">
+    <header class="dochead"><span class="no" aria-hidden="true">08</span><span class="lab">Investor relations</span><span class="meta">Official channels</span></header>
+    <h2 id="contact-h">Contact investor relations.</h2>
+    <div class="contact-grid">
+      <div class="contact-col"><h3>Investor relations</h3>
+        <a href="https://ir.optimi.net" target="_blank" rel="noopener">ir.optimi.net</a>
+        <a href="mailto:ir@optimi.net">ir@optimi.net</a>
+        <p class="c-note">The investor site and address are the ones linked from the company&rsquo;s own home page. <span class="tg tg-site">Company site</span> <a class="src" href="https://www.optimi.net/" target="_blank" rel="noopener">Home page</a></p></div>
+      <div class="contact-col"><h3>Principal executive office</h3>
+        <address>269 David Brown Way<br>Princeton, British Columbia V0X&nbsp;1W0<br>Canada</address>
+        <p class="c-note">As printed on the cover of the company&rsquo;s Forms 6-K. <a class="src" href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326006705/f6k_102026.htm" target="_blank" rel="noopener">6-K, Oct 20</a></p></div>
+      <div class="contact-col"><h3>Filings</h3>
+        <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0002027329&amp;type=&amp;dateb=&amp;owner=include&amp;count=40" target="_blank" rel="noopener">SEC EDGAR, CIK 0002027329</a>
+        <a href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">Prospectus of August 27, 2026</a></div>
+      <div class="contact-col"><h3>Investor alerts</h3>
+        <p class="c-note c-note-first">This concept page collects no email address and runs no subscription. Ask the company through its investor site or the address beside it.</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+<div class="foot-brand"><span class="foot-name">Optimi Health</span></div>
+<ul class="footer-links">
+  <li><a href="https://ir.optimi.net" target="_blank" rel="noopener">Official investor relations</a></li>
+  <li><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0002027329&amp;type=&amp;dateb=&amp;owner=include&amp;count=40" target="_blank" rel="noopener">SEC EDGAR filings, CIK 0002027329</a></li>
+  <li><a href="https://www.sec.gov/Archives/edgar/data/2027329/000121390026094371/ea0303506-424b3_optimi.htm" target="_blank" rel="noopener">Prospectus, August 27, 2026</a></li>
+  <li><a href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326005554/f6k_081426.htm" target="_blank" rel="noopener">Form 6-K, August 14, 2026</a></li>
+  <li><a href="https://www.sec.gov/Archives/edgar/data/2027329/000117184326006705/f6k_102026.htm" target="_blank" rel="noopener">Form 6-K, October 20, 2026</a></li>
+</ul>
+<p class="method">How this page was made: figures come from the company&rsquo;s prospectus of August 27, 2026 (Form 424B3, which carries the audited statements for the years ended September 30, 2025 and 2024), its prospectus of May 20, 2026 (Form 424B4), the Form 6-K of August 14, 2026 (the nine-month statements and MD&amp;A), the Forms 6-K listed above in the filings section, and one Schedule 13G/A of October 5, 2026. Statements are labelled filed, company statement, computed or company site. The company is a foreign private issuer, so the notice below that mentions &ldquo;the most recent 10-K and 10-Q&rdquo; should be read as its most recent Form 20-F, when one is filed, and its Forms 6-K; its first Form 20-F, for the year ending September 30, 2026, has not yet been filed. Amounts are Canadian dollars under IFRS as filed, unless marked US$. Statements on optimi.net, including the product images, were read on October 19 and 20, 2026 and may since have changed; the two structure drawings are redrawn for this concept page and are not the company&rsquo;s artwork. This page shows no market quote and uses no photograph of a person. Nothing here is investment advice.</p>
+    <p class="fls"><b>About this page:</b> This is an independent design concept and is not the official Optimi Health investor relations website. It is not affiliated with, endorsed by, or maintained by Optimi Health Corp. Figures were assembled from public materials at a point in time and may be outdated; verify every figure against the company's official SEC filings. For official information, visit <a href="https://ir.optimi.net">ir.optimi.net</a>.</p>
+    <p class="fls"><b>Forward-Looking Statements:</b> This website contains forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995, including statements regarding the company's ability to continue as a going concern and to fund its operations, its licences and the legal status of psilocybin and MDMA in each market, the timing and outcome of its planned clinical trials, its supply to Australia and other markets, its equity line of credit with Seven Knots, LLC and the dilution it may cause, and its debt owed to companies controlled by directors. These statements involve known and unknown risks, uncertainties, and other factors that may cause actual results to differ materially from those expressed or implied. We undertake no obligation to update any forward-looking statements except as required by law. See the company's SEC filings, including its most recent 10-K and 10-Q, for a full discussion of risk factors.</p>
+    <p class="market-note">Market data, where shown, is delayed at least 15 minutes and provided for this concept only. Real-time quotes and official figures are available through the company's investor relations site and SEC filings. This concept page shows no live or delayed share quote. Share counts are those printed in the filings cited beside them, and amounts are Canadian dollars under IFRS unless marked US$.</p>
+  </div>
+</footer>
+
+<script>
+/* mediaconsole motion: inlined by scaffold.mjs at the end of body, identical on every page; never edit it.
+   Sets html.js, runs the ONE reveal observer (fires the mc:reveal hook), scroll-spy, hamburger aria, and the
+   #hero-motif .paused toggle (off-screen, hidden tab, [data-motif-toggle]). Null-guarded: a failure reveals everything. */
+(function(){
+  var d=document,root=d.documentElement;
+  root.classList.add('js');
+  var reduce=!!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  var hasIO='IntersectionObserver' in window;
+  function fire(el,name,detail){
+    var ev;
+    try{ev=new CustomEvent(name,{bubbles:true,detail:detail})}
+    catch(x){ev=d.createEvent('CustomEvent');ev.initCustomEvent(name,true,false,detail)}
+    el.dispatchEvent(ev);
+  }
+  /* mc:reveal fires ONCE per .reveal element, bubbling, as .in lands; detail.reduced is true under reduced motion.
+     Components hook here (counters.js) instead of adding a second observer. */
+  function show(el){
+    if(el.classList.contains('in'))return;
+    el.classList.add('in');
+    fire(el,'mc:reveal',{reduced:reduce});
+  }
+  try{
+    var els=[].slice.call(d.querySelectorAll('.reveal'));
+    if(reduce||!hasIO){els.forEach(show)}
+    else{
+      var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){io.unobserve(e.target);show(e.target)}})},{threshold:.12});
+      els.forEach(function(el){io.observe(el)});
+    }
+  }catch(err){root.classList.remove('js');[].forEach.call(d.querySelectorAll('.reveal'),function(el){el.classList.add('in')})}
+  try{
+    var burger=d.querySelector('.nav-burger'),links=d.getElementById('nav-links'),nav=d.querySelector('.site-nav');
+    if(burger&&links){
+      var setOpen=function(o){links.classList.toggle('open',o);burger.setAttribute('aria-expanded',o?'true':'false')};
+      burger.addEventListener('click',function(){setOpen(!links.classList.contains('open'))});
+      links.addEventListener('click',function(e){if(e.target.closest&&e.target.closest('a'))setOpen(false)});
+      d.addEventListener('keydown',function(e){if((e.key==='Escape'||e.key==='Esc')&&links.classList.contains('open')){setOpen(false);burger.focus()}});
+    }
+    if(nav){var onScroll=function(){nav.classList.toggle('scrolled',window.scrollY>8)};window.addEventListener('scroll',onScroll,{passive:true});onScroll()}
+  }catch(err){}
+  try{
+    var na=[].slice.call(d.querySelectorAll('.nav-links a[href^="#"]:not(.btn)'));
+    if(na.length&&hasIO){
+      var so=new IntersectionObserver(function(en){en.forEach(function(e){
+        if(!e.isIntersecting)return;var id='#'+e.target.id;
+        na.forEach(function(a){var on=a.getAttribute('href')===id;a.classList.toggle('active',on);if(on)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current')});
+      })},{rootMargin:'-40% 0px -55% 0px'});
+      na.forEach(function(a){var t=d.getElementById(a.getAttribute('href').slice(1));if(t)so.observe(t)});
+    }
+  }catch(err){}
+  /* hero motif pause: toggles .paused on #hero-motif (off-screen, hidden tab, or the user's [data-motif-toggle]).
+     The class is the whole contract: substrate CSS pauses every CSS animation inside it; JS motifs watch it (wave.js). */
+  try{
+    var motif=d.getElementById('hero-motif');
+    if(motif&&!reduce){
+      var hero=d.getElementById('hero')||motif,hv=true,user=false,tg=[].slice.call(d.querySelectorAll('[data-motif-toggle]'));
+      var sm=function(){var p=user||!hv||d.hidden;motif.classList.toggle('paused',p)};
+      if(hasIO)new IntersectionObserver(function(en){en.forEach(function(e){hv=e.isIntersecting});sm()},{threshold:0}).observe(hero);
+      d.addEventListener('visibilitychange',sm);
+      tg.forEach(function(b){
+        b.setAttribute('aria-pressed','false');
+        b.addEventListener('click',function(){user=!user;tg.forEach(function(t){t.setAttribute('aria-pressed',user?'true':'false')});sm()});
+      });
+    }
+  }catch(err){}
+})();
+</script>
+<script>
+/* Optimi Health: the hero pause control. motion.js already pauses #hero-motif off screen and when the tab is hidden; this adds
+   the visitor's own switch (WCAG 2.2.2) and keeps its label and state in step. The plate is a finished drawing without any motion. */
+(function () {
+  var btn = document.querySelector('[data-motif-toggle]');
+  var motif = document.getElementById('hero-motif');
+  if (!btn || !motif) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) { btn.hidden = true; return; }
+  btn.addEventListener('click', function () {
+    var on = btn.getAttribute('aria-pressed') !== 'true';
+    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    btn.textContent = on ? 'Resume motion' : 'Pause motion';
+    motif.classList.toggle('user-paused', on);
+  });
+})();
+</script>
+</body>
+</html>
